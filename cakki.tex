@@ -1,0 +1,29 @@
+\PassOptionsToPackage{en-US}{datetime2}
+\documentclass[11pt, a4paper, sidefootnotes, english]{pancake-book}
+
+\input{infofiles/preamble}
+\addbibresource{bibliography.bib}
+
+\makeglossaries
+\input{abbreviations}
+
+\begin{document}
+\title{\langname: An Incomplete Grammar}
+\author{Jamie Ziyi Li}
+\date{\DTMusedate{startdate} -- \DTMtoday}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+\input{infofiles/introduction}
+\input{infofiles/phono}
+\input{infofiles/clauses}
+
+\backmatter
+\printglossaries
+\printbibliography
+\end{document}

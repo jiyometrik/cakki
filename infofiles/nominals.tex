@@ -1,0 +1,461 @@
+\chapter{Nominals}
+\label{cha:nominals}
+
+This chapter discusses the \langname{} noun. The most essential---the pronouns---are
+introduced in \cref{sec:pronouns}, following which grammatical number is discussed (\cref{sec:noun_number}).
+A case system (\cref{sec:case_system}) is then presented.
+Notably, \langname{} does not contain noun classes which are to be treated differently syntactically.
+
+\section{Pronouns and determiners}
+\label{sec:pronouns}
+
+\subsection{Personal pronouns}
+The personal pronouns differentiate three persons (first, second and third) and two grammatical numbers (singular and plural).
+They do not distinguish grammatical gender nor animacy.
+Notably, the first person plural also distinguishes clusivity: there are separate roots for the first
+person plural inclusive and first person plural exclusive.
+
+The case markers for the three nuclear cases remain intact on all seven
+pronoun roots. Where the number of syllables becomes unwieldy, the first syllables
+of the pronouns are truncated.
+
+As seen later, pronouns become cliticised when verbs are introduced---it is mandatory for a verb
+to denote its agent and direct patient. \Cref{tab:personal_pronouns} lists two versions
+of each pronoun: the former being the pronoun root (in reality), and the
+latter being the cliticised form to be attached to verbs in a clause.\sidenote{The third person singular is treated as the default person, so it does not need to adopt a clitic form.}
+The clitic suffixes in the absolutive case are often subsumed into the dative case for certain verbs
+that involve the transfer of objects from one noun to another.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{c c c c c}
+    \toprule
+    & \ABS{} & \ERG{} & \DAT{} \\
+    \midrule
+    \FIRST\SG{} & \rom{sinaw}, \rom{-naw} & \rom{le-sinaw}, \rom{si-} & \rom{nu-sinaw} \\
+    \FIRST\PL.\INCL{} & \rom{ŋenakay}, \rom{-kay} & \rom{le-nakay}, \rom{ŋena-} & \rom{nu-ŋakay} \\
+    \FIRST\PL.\EXCL{} & \rom{ŋurumay}, \rom{-may} & \rom{le-rumay}, \rom{ŋuru-} & \rom{nu-rumay} \\
+    \SECOND\SG{} & \rom{ketaw}, \rom{-taw} & \rom{le-ketaw}, \rom{ke-} & \rom{nu-ketaw} \\
+    \SECOND\PL{} & \rom{kacelu}, \rom{-lu} & \rom{le-celu}, \rom{kace-} & \rom{nu-celu} \\
+    \THIRD\SG{} & \rom{mera} & \rom{le-mera} & \rom{nu-mera} \\
+    \THIRD\PL{} & \rom{warhal}, \rom{-hal} & \rom{le-warhal}, \rom{war-} & \rom{nu-warhal} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Personal pronouns}
+  \label{tab:personal_pronouns}
+\end{table}
+
+Since the personal pronouns are always cliticised onto verbs, they are very often
+omitted in complete sentences, as in this extreme \cref{ex:we_kill_them}.
+\begin{example}
+  \label{ex:we_kill_them}
+  \script Siwahashal maylecelu.
+  \gloss
+  si= & 1SG.ERG \\
+  wahas & kill \\
+  =hal & 3PL.DAT \\
+  may- & INS \\
+  le- & ABS \\
+  celu & 2PL \\
+  \tr I kill them alongside you (all).
+\end{example}
+
+The pronoun clitics are also used for denoting possession of a noun by another.
+The grammatical case the `possessor' clitics adopt agrees with that of the `possession', and
+the `possessor' noun follows the `possession'. Where the `possessor' noun is a pronoun unto itself,
+the case marker can be omitted, since the `possessor' pronoun clitic already reveals its case.
+
+Compare \cref{ex:i_hate_their_dog,ex:they_hate_my_dog}: notice how the pronoun clitics attached to the dog \rom{pariw}
+change to denote the possessor, according to the dog's role in the sentence.
+
+\begin{example}
+  \label{ex:i_hate_their_dog}
+  \script Siyahin pariwhal.
+  \gloss
+  si= & 1SG.ERG \\
+  yahin & hate \\
+  =∅ & 3SG.ABS \\
+  pariw & dog \\
+  =hal & 3PL.ABS \\
+  \tr I hate their dog.
+\end{example}
+
+\begin{example}
+  \label{ex:they_hate_my_dog}
+  \script Waryahin pariwnaw.
+  \gloss
+  war= & 3PL.ERG \\
+  yahin & hate \\
+  =∅ & 3SG.ABS \\
+  pariw & dog \\
+  =naw & 1SG.ABS \\
+  \tr They hate my dog.
+\end{example}
+
+Compare also \cref{ex:i_see_pamats_eye,ex:i_see_his_eye}. In both examples,
+the `possessor' takes on the absolutive case while the `possession'---the eye---is
+in the dative case. Appending \rom{mera} in \cref{ex:i_see_his_eye} is essential here
+to clarify that the eye is being possessed, rather than being simply an eye.
+
+\begin{example}
+  \label{ex:i_see_pamats_eye}
+  \script Si'umpa nuŋe' Pamat.
+  \gloss
+  si= & 1SG.ERG \\
+  'umpa & see \\
+  =∅ & 3SG.DAT \\
+  nu- & DAT \\
+  ŋe' & eye \\
+  ∅= & ABS \\
+  Pamat & Pamat \\
+  \tr I see Pamat's eye.
+\end{example}
+
+\begin{example}
+  \label{ex:i_see_his_eye}
+  \script Si'umpa nuŋe' mera.
+  \gloss
+  si= & 1SG.ERG \\
+  'umpa & see \\
+  =∅ & 3SG.DAT \\
+  nu- & DAT \\
+  ŋe' & eye \\
+  mera & 3SG.ABS \\
+  \tr I see his/her eye.
+\end{example}
+
+\subsection{Demonstrative pronouns---or maybe not?}
+\langname{} lacks demonstrative pronouns (the equivalents of \detail{this} and \detail{that} in English).
+Since the third person pronouns do not distinguish animacy, they are also used when referring
+to objects. Instead, all nouns are treated as inherently indefinite. To mark definiteness,
+the prefix \rom{pel-} is used. Observe the contrast between \cref{ex:slit_bamboo,ex:slit_the_bamboo}.
+
+\begin{example}
+  \label{ex:slit_bamboo}
+  \script Teŋahal miminahaw.
+  \gloss
+  ∅= & 3SG.ERG \\
+  teŋa & slit \\
+  =hal & 3PL.ABS \\
+  ∅- & ABS \\
+  mi^ & COL \\
+  minahaw & bamboo \\
+  \tr He/she slits bamboo (in general).
+\end{example}
+
+\begin{example}
+  \label{ex:slit_the_bamboo}
+  \script Teŋahal pelmiminahaw.
+  \gloss
+  ∅= & 3SG.ERG \\
+  teŋa & slit \\
+  =hal & 3PL.ABS \\
+  ∅- & ABS \\
+  pel- & DEF \\
+  mi^ & COL \\
+  minahaw & bamboo \\
+  \tr He/she slits the bamboo.
+\end{example}
+
+Grammatical number is already established by the pronoun root itself, so
+equivalents of English \detail{these} and \detail{those} aren't required.
+Interestingly, the definite prefix can also be used when introducing a person
+by name, as in \cref{ex:i_am_hayat}.
+\begin{example}
+  \label{ex:i_am_hayat}
+  \script Pelhayat'urah sinaw.
+  \gloss
+  pel- & DEF \\
+  Hayat'urah & Khayatura \\
+  sinaw & 1SG.ABS \\
+  \tr I am Khayatura.
+\end{example}
+
+This `introductory' function of the definite prefix also extends to other nouns.
+Broadly, it can be employed to draw attention to a noun, when, for instance, introducing
+it for the first time.
+% TODO add ex here
+
+\section{Grammatical number}
+\label{sec:noun_number}
+
+\langname{} nouns do not inflect for grammatical number. In actuality,
+nouns are free to be interpreted with any number. Contrast \cref{ex:sheep_happy,ex:sheeps_happy}:
+the only hint at whether the \detail{sheep} is an individual or a number of sheep is
+the third person marker on the verb, rather than on the noun.
+
+\begin{example}
+  \label{ex:sheep_happy}
+  \script Yayamu pelhurma.
+  \gloss
+  ya^ & PROG \\
+  yamu & happy \\
+  =∅ & 3SG.ABS \\
+  pel- & DEF \\
+  hurma & sheep \\
+  \tr The sheep is happy.
+\end{example}
+
+\begin{example}
+  \label{ex:sheeps_happy}
+  \script Yayamuhal pelhurma.
+  \gloss
+  ya^ & PROG \\
+  yamu & happy \\
+  =hal & 3PL.ABS \\
+  pel- & DEF \\
+  hurma & sheep \\
+  \tr The sheep are happy.
+\end{example}
+
+Despite the lack of a distinction between singular and plural nouns (marked on the noun), it would be remiss to neglect
+the role \textbf{reduplication} plays. Reduplication is used to express a noun in the collective (\COL{});
+instead of referring to the noun as an individual or in a number, the noun can be semantically expressed
+as a general concept. Contrast again \cref{ex:sheep_happy,ex:sheeps_happy} with \cref{ex:the_sheeps_happy}.
+\begin{example}
+  \label{ex:the_sheeps_happy}
+  \script Yayamuhal pelhurhurma.
+  \gloss
+  ya^ & PROG \\
+  yamu & happy \\
+  =hal & 3PL.ABS \\
+  pel- & DEF \\
+  hu^ & COL \\
+  hurma & sheep \\
+  \tr The sheep (in general, as a concept) are happy.
+\end{example}
+
+To express the collective number, the first CV pair of the noun root is reduplicated.
+This reduplication can occur with any noun, as in \cref{ex:dog_singular,ex:dog_collective}.
+\begin{examples}
+  \ex\label{ex:dog_singular}
+  \script pariw
+  \gloss pariw & dog \\
+  \tr a dog/some dogs
+
+  \ex\label{ex:dog_collective}
+  \script papariw
+  \gloss
+  pa^ & COL \\
+  pariw & dog \\
+  \tr dogs (as a collective)
+\end{examples}
+
+\section{Case system}
+\label{sec:case_system}
+
+Generally, \langname{}'s case system is highly productive, containing
+a variety of cases marking the roles of nouns in a sentence.
+
+\subsection{Nuclear cases}
+
+\langname{} relies on ergative--absolutive alignment, which means that the subject
+of an intransitive statement is marked the same as the direct patient (or object) of a transitive
+statement, with the \detail{absolutive case} (\ABS{}), marked with a zero morpheme. \Cref{ex:abs_intransitive} shows
+the absolutive case on intransitive subjects.\sidenote{Note also that the absolutive noun is marked on the verb with a suffix!}
+
+\begin{example}
+  \label{ex:abs_intransitive}
+  \script Tuŋakŋak Luwan.
+  \gloss
+  tu- & PST \\
+  ŋak^ & PROG \\
+  ŋak & whine \\
+  =∅ & 3SG.ABS \\
+  ∅- & ABS \\
+  Luwan & Luan \\
+  \tr Luan was whining.
+  \not Luan whined.
+\end{example}
+
+For transitive statements involving an agent and a patient,
+the patient adopts the absolutive case as before, and the
+agent adopts the \detail{ergative case} (\ERG{}), marked with the prefix \rom{le-}. This is shown
+in \cref{ex:erg_transitive}, where \rom{luwan} is the agent and \rom{'alik} is
+the patient.\sidenote{Similarly, the ergative noun is marked on the verb with a prefix!}
+
+\begin{example}
+  \label{ex:erg_transitive}
+  \script Tuyahin lepariw 'alik.
+  \gloss
+  tu- & PST \\
+  ∅= & 3SG.ERG \\
+  yahin & hate \\
+  =∅ & 3SG.ABS \\
+  le- & ERG \\
+  pariw & dog \\
+  ∅- & ABS \\
+  'alik & daikon \\
+  \tr A dog hated daikon.
+  \not A dog \textit{was hating} daikon.
+\end{example}
+
+A third dative case (\DAT) exists in \langname{} to mark the indirect
+patient of a transitive statement. The three parties in \cref{ex:erg_abs_dat} (agent,
+direct patient and indirect patient) can then be crudely
+identified as the object performing the action, the object being acted upon,
+and the beneficiary of the action. Similarly, the dative case is marked with the prefix \rom{nu-}.
+
+\begin{example}
+  \label{ex:erg_abs_dat}
+  \script Tu'alit leluwan nuhayat 'alik.
+  \gloss
+  tu- & PST \\
+  ∅= & 3SG.ERG \\
+  'alit & give \\
+  =∅ & 3SG.ABS \\
+  le- & ERG \\
+  Luwan & Luan \\
+  nu- & DAT \\
+  Hayat & Khayat \\
+  ∅- & ABS \\
+  'alik & daikon \\
+  \tr Luan gave daikon to Khayat.
+  \not Luan gave \textit{the} daikon to Khayat.
+\end{example}
+
+The dative case can also be used when an action inherently involves a transfer of
+an object from one noun to another noun, as in \cref{ex:feeding_chicken}.
+\begin{example}
+  \label{ex:feeding_chicken}
+  \script Naŋkit nucarik.
+  \gloss
+  ∅= & 3SG.ERG \\
+  naŋkit & feed \\
+  =∅ & 3SG.DAT \\
+  nu- & DAT \\
+  carik & chicken \\
+  \tr He/she feeds (a) chicken.
+\end{example}
+
+So far, the word order has remained fixed---a steady VS for intransitive statements (where V is the verb and S is the subject),
+and a VA(I)P for transitive statements, where A is the agent, I is the indirect patient, and P is the direct patient.
+
+To mark the \detail{topic} of a statement, the particle \rom{ya} is used (\TOP) and the topic is commonly
+(but not always) shifted to the front of the sentence. Using the previous example
+as a reference, \cref{ex:erg_focus,ex:abs_focus,ex:dat_focus} show this. If the topic already contains
+a non-zero role marker (like \ERG{} or \DAT), the marker is retained.
+
+\begin{examples}
+  \ex\label{ex:erg_focus}
+  \script Leluwan ya tu'alit nuhayat 'alik.
+  \gloss
+  le- & ERG \\
+  Luwan & Luan \\
+  ya & TOP \\
+  tu- & PST \\
+  ∅= & 3SG.ERG \\
+  'alit & give \\
+  =∅ & 3SG.ABS \\
+  nu- & DAT \\
+  Hayat & Khayat \\
+  ∅- & ABS \\
+  'alik & daikon \\
+  \tr Regarding Luan, he gave daikon to Khayat.
+\end{examples}
+
+\begin{examples}
+  \ex\label{ex:abs_focus}
+  \script 'alik ya tu'alit leluwan nuhayat.
+  \gloss
+  ∅- & ABS \\
+  'alik & daikon \\
+  ya & TOP \\
+  tu- & PST \\
+  ∅= & 3SG.ERG \\
+  'alit & give \\
+  =∅ & 3SG.ABS \\
+  le- & ERG \\
+  Luwan & Luan \\
+  nu- & DAT \\
+  Hayat & Khayat \\
+  \tr Regarding daikon, Luan gave it to Khayat.
+\end{examples}
+
+\begin{examples}
+  \ex\label{ex:dat_focus}
+  \script Nuhayat ya tu'alit leluwan 'alik.
+  \gloss
+  nu- & DAT \\
+  Hayat & Khayat \\
+  ya & TOP \\
+  tu- & PST \\
+  ∅= & 3SG.ERG \\
+  'alit & give \\
+  =∅ & 3SG.ABS \\
+  le- & ERG \\
+  Luwan & Luan \\
+  ∅- & ABS \\
+  'alik & daikon \\
+  \tr Regarding daikon, Luan gave it to Khayat.
+\end{examples}
+
+\subsection{Other cases}
+\langname{} has one case that mark the position of an object relative to another---the
+locative (\LOC, \detail{at} an object). The locative may be used in conjunction
+with any of the three nuclear cases mentioned above.
+
+The locative case denotes an object at approximately the same location as another.
+\Cref{ex:willow_walk,ex:rock_fight} show the locative case in action in intransitive
+and transitive statements.
+
+\begin{examples}
+  \ex\label{ex:willow_walk}
+  \script Pasinaw cinraraŋuy.
+  \gloss
+  pasi & walk \\
+  =naw & 1SG.ABS \\
+  cin- & LOC \\
+  ra^ & COL \\
+  raŋuy & willow \\
+  \tr I walk in the willows.
+\end{examples}
+
+\begin{examples}
+  \ex\label{ex:rock_fight}
+  \script Simeluktaw cintentu.
+  \gloss
+  si= & 1SG.ERG \\
+  meluk & fight \\
+  =taw & 2SG.ABS \\
+  cin- & LOC \\
+  tentu & rock \\
+  \tr I fight you at a rock.
+\end{examples}
+
+In addition, the instrumental case (\INS) is employed to denote an action
+undergone \detail{using} an object, as seen in \cref{ex:kill_knife}. The instrumental also subsumes the comitative
+case present in other languages---it can also denote an action undergone \detail{in conjunction with}
+an object. Again, the instrumental case can be attached to another of the nuclear cases.
+
+\begin{example}
+  \label{ex:kill_knife}
+  \script Siwahas (lesinaw) nupamat maymiraŋ.
+  \gloss
+  si= & 1SG.ERG \\
+  wahas & kill \\
+  =∅ & 3SG.DAT \\
+  le- & ERG \\
+  sinaw & 1SG \\
+  nu- & DAT \\
+  Pamat & Pamat \\
+  may- & INS \\
+  miraŋ & dagger \\
+  \tr I kill Pamat with a dagger.
+\end{example}
+
+\begin{example}
+  \label{ex:kill_chickens}
+  \script Siwahas (lesinaw) maypamat nucarik.
+  \gloss
+  si= & 1SG.ERG \\
+  wahas & kill \\
+  =∅ & 3SG.DAT \\
+  le- & ERG \\
+  sinaw & 1SG \\
+  may- & INS \\
+  Pamat & Pamat \\
+  nu- & DAT \\
+  carik & chicken \\
+  \tr I kill (a) chicken with Pamat.
+\end{example}
