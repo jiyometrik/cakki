@@ -16,8 +16,8 @@ is placed at the head of the sentence, then the direct object, then the verb its
   Pamat & Pamat \\
   ta- & ACC \\
   pariw & dog \\
-  ∅= & 3SG.NOM \\
   yahin & hate \\
+  =∅ & 3SG.NOM \\
   \tr Pamat hates (a certain) dog.
 \end{example}
 
@@ -31,22 +31,22 @@ following examples carrying the same meaning, \cref{ex:dog_pamat_hates,ex:hates_
   \label{ex:dog_pamat_hates}
   \gloss
   ta- & ACC \\
-  pariw & dog \\
+  \highlight{pariw} & dog \\
   Pamat & Pamat \\
-  ∅= & 3SG.NOM \\
   yahin & hate \\
-  \tr As for \textit{(a certain) dog}, Pamat hates it.
+  =∅ & 3SG.NOM \\
+  \tr As for (a certain) \textit{dog}, Pamat hates it.
 \end{example}
 
 \begin{example}
   \label{ex:hates_pamat_dog}
   \gloss
-  ∅= & 3SG.NOM \\
-  yahin & hate \\
+  \highlight{yahin} & hate \\
+  =∅ & 3SG.NOM \\
   Pamat & Pamat \\
   ta- & ACC \\
   pariw & dog \\
-  \tr As for \textit{hating}, Pamat does with (a certain) dog.
+  \tr \textit{To hate}, is what Pamat does to (a certain) dog.
 \end{example}
 
 \subsection{Postpositions}
@@ -58,13 +58,13 @@ the postposition \rom{ʔumul} (`below') comes \textit{after} the noun to which i
   \gloss
   Luan & Luan \\
   caʔi- & LOC \\
-  raŋuy & willow \\
-  ʔumul & below \\
+  \highlight{raŋuy} & willow \\
+  \highlight{ʔumul} & below \\
   ta- & ACC \\
   carik & chicken \\
   ʔin- & PFV \\
-  ∅= & 3SG.NOM \\
   wahas & kill \\
+  =∅ & 3SG.NOM \\
   \tr As for \textit{Luan}, he has killed a chicken below a willow tree.
 \end{example}
 
@@ -78,9 +78,9 @@ subject, \rom{kawam} (a proper name).
   \label{ex:kawam_walking}
   \gloss
   Kawam & Kawam \\
-  ∅= & 3SG.NOM \\
-  pasi^ & walk \\
+  pasi^ & PROG \\
   pasi & walk \\
+  =∅ & 3SG.NOM \\
   \tr Kawam is walking.
 \end{example}
 
@@ -90,25 +90,113 @@ the equivalent \cref{ex:walking_kawam}.
 \begin{example}
   \label{ex:walking_kawam}
   \gloss
-  ∅= & 3SG.NOM \\
-  pasi^ & walk \\
-  pasi & walk \\
+  \highlight{pasi}^ & PROG \\
+  \highlight{pasi} & walk \\
+  =∅ & 3SG.NOM \\
   Kawam & Kawam \\
-  \tr Walk, Kawam does.
+  \tr As for \textit{walking}, Kawam is doing so.
+\end{example}
+
+\section{Non-verbal clauses}
+Non-verbal clauses are clauses in which a declarative verb (intransitive or transitive)
+is not immediately apparent. This section illustrates how \langname{} handles such phrases.
+
+\subsection{Existential clauses}
+Existential clauses are clauses that, when translated to English, usually
+begin with `there exist(s)' or `there are'. For such clauses,
+\langname{} employs the intransitive verb \rom{semat} (`to stand') as an existential
+verb, as in \cref{ex:theres_a_dog_here}.
+
+\begin{example}
+  \label{ex:theres_a_dog_here}
+  \gloss
+  pariw & dog \\
+  'ita & one \\
+  kisak & CLF.small.animal \\
+  caʔi- & LOC \\
+  taŋamuy & here \\
+  semat & stand \\
+  =∅ & 3SG.NOM \\
+  \tr There is one dog here.
+\end{example}
+
+\subsection{Locative clauses}
+Locative clauses, in which the subject is \textit{in} a certain location, the
+\acrfull{loc} is employed together with the `existential' verb \rom{semat} (`to stand'), as in \cref{ex:mother_is_at_the_forest}.
+\begin{example}
+  \label{ex:mother_is_at_the_forest}
+  \gloss
+  ʔamu & mother \\
+  caʔi- & LOC \\
+  tentu^ & COL \\
+  tentu & tree \\
+  semat & stand \\
+  =∅ & 3SG.NOM \\
+  \tr Mother is in a forest.
+\end{example}
+
+\subsection{Nominal clauses}
+Nominal clauses usually take the form `X is Y'. In \langname{}, this is indicated
+by juxtaposing the two nominals, placing the subject (the noun being likened)
+before the object (the noun being likened \textit{to}), since \langname{}
+lacks copulae. See \cref{ex:he_is_pamat,ex:that_is_your_chicken}.
+\begin{example}
+  \label{ex:he_is_pamat}
+  \gloss
+  mera & 3SG \\
+  ta- & ACC \\
+  pamat & Pamat \\
+  \tr He is Pamat.
+\end{example}
+
+\begin{example}
+  \label{ex:that_is_your_chicken}
+  \gloss
+  ʔaliŋ & DEM.DIST \\
+  ta- & ACC \\
+  ker= & 2SG.GEN \\
+  carik & chicken \\
+  \tr That's your chicken.
+\end{example}
+
+Adjectival clauses, where Y in the `X is Y' format is an adjective, are handled
+in the same manner. In this case, adjectives are treated as verbs, and thus
+take on pronoun clitics, as in \cref{ex:khayat_is_tall,my_clothes_were_beautiful}.
+\begin{example}
+  \label{ex:khayat_is_tall}
+  \gloss
+  Hayat & Khayat \\
+  ŋela^ & long \\
+  ŋelahu & long \\
+  =∅ & 3SG.NOM \\
+  \tr Hayat is tall.
+\end{example}
+
+\begin{example}
+  \label{ex:my_clothes_were_beautiful}
+  \gloss
+  se= & 1SG.GEN \\
+  kan- & NMLZ.PARG \\
+  watis & wear \\
+  puŋ- & PST \\
+  culi^ & PROG \\
+  culi & beautiful \\
+  =wat & 3PL.NOM \\
+  \tr My clothes were beautiful.
 \end{example}
 
 \section{Modifiers}
 Modifiers are lexemes that supplement information to a base noun. This
 section quickly discusses the order in which they occur after a noun.
 
-\textbf{Adjectives} follow their attached noun, as in \cref{ex:red_dog}.
+\textbf{Adjectives} follow their attached noun, as in \cref{ex:white_dog}.
 \begin{example}
-  \label{ex:red_dog}
+  \label{ex:white_dog}
   % \script pariw mipu
   \gloss
   pariw & dog \\
-  mipu & red \\
-  \tr (a) red dog
+  \highlight{purah} & white \\
+  \tr (a) white dog
 \end{example}
 
 Similarly, \textbf{numbers} that detail the quantity of a certain referent also follow
@@ -120,21 +208,21 @@ the \textbf{noun classifier} also follows its attached referent, following the n
   % \script pariw ʔiker
   \gloss
   ʔacak & human \\
-  tami & three \\
+  \highlight{tami} & three \\
   \tr three people
 \end{example}
 
 \begin{example}
   \label{ex:six_books}
   \gloss
-  hum & book \\
+  huʔam & book \\
   halih & six \\
-  pelaʔi & CLF.sheet \\
+  \highlight{pelay} & CLF.sheet \\
   \tr six books
 \end{example}
 
-\textbf{Demonstrative nouns} (\DEM{}.\PROX{} and \DEM{}.\DIST{}) also follow
-their referents. Observe \cref{ex:these_two_trees,ex:that_asleep_dog} which demonstrate each
+\textbf{\Acrfull{dem} nouns} also follow
+their referents. Observe \cref{ex:these_two_trees,ex:that_black_dog} which demonstrate each
 demonstrative noun combined with another modifier.
 
 \begin{example}
@@ -145,21 +233,21 @@ demonstrative noun combined with another modifier.
   ŋelahu & long \\
   rawa & two \\
   waʔiŋ & CLF.tree \\
-  ʔamuy & DEM.PROX \\
+  \highlight{ʔamuy} & DEM.PROX \\
   \tr these two tall trees
 \end{example}
 
 \begin{example}
-  \label{ex:that_asleep_dog}
+  \label{ex:that_black_dog}
   % \script ʔaliŋ pariw ʔaŋ wasuwasu
   \gloss
   pariw & dog \\
   tuʔat & black \\
-  ʔaliŋ & DEM.DIST \\
+  \highlight{ʔaliŋ} & DEM.DIST \\
   \tr that/yonder black dog
 \end{example}
 
-Contrastingly, \textbf{relative clauses} precede their attached noun, as in \cref{ex:sleeping_dog}.
+Contrastingly, \textbf{relative clauses} delimited by the \acrfull{rel} precede their attached noun, as in \cref{ex:sleeping_dog}.
 More detail into relative clauses will appear in future chapters.
 \begin{example}
   \label{ex:sleeping_dog}
@@ -167,8 +255,8 @@ More detail into relative clauses will appear in future chapters.
   \gloss
   wasu^ & PROG \\
   wasu & sleep \\
-  ʔaŋ &  REL \\
-  pariw & dog \\
+  \highlight{ʔaŋ} &  REL \\
+  \highlight{pariw} & dog \\
   \tr a dog which is sleeping
 \end{example}
 
@@ -178,11 +266,11 @@ the `possession' can easily be distinguished from it, as in \cref{ex:kings_boar}
 \begin{example}
   \label{ex:kings_boar}
   \gloss
-  tapiwaŋa & king \\
+  \highlight{tapiwaŋa} & king \\
   ʔamuy & DEM.PROX \\
   me= & 3SG.GEN \\
   kataŋ & boar \\
-  \tr king's boar
+  \tr this king's boar
 \end{example}
 
 Where the `possessor' is a personal pronoun, the personal pronoun is cliticised as a prefix onto the `possession',
@@ -190,9 +278,9 @@ as in \cref{ex:their_boar}.\sidenote{Case markers and pronoun clitics will be di
 \begin{example}
   \label{ex:their_boar}
   \gloss
-  hal= & 3PL.GEN \\
+  \highlight{hal}= & 3PL.GEN \\
   kataŋ & boar \\
-  purah & red \\
+  mipu & red \\
   \tr their red boar
 \end{example}
 
@@ -225,15 +313,15 @@ seen in \cref{ex:hayat_boil_millet}.
   \label{ex:hayat_boil_millet}
   \gloss
   Hayat & Khayat \\
-  nicawat & tomorrow \\
   ta- & ACC \\
   keʔiti & millet \\
+  \highlight{nicawat} & tomorrow \\
   caʔi- & LOC \\
-  rewtew & hut \\
+  \highlight{rewtew} & hut \\
   may- & INS \\
-  sakep & pot \\
-  ∅= & 3SG.NOM \\
+  \highlight{sakep} & pot \\
   kuŋi & boil \\
+  =∅ & 3SG.NOM \\
   \tr Khayat will boil millet with a pot in a hut tomorrow.
 \end{example}
 
@@ -244,15 +332,15 @@ serve as the focus of a clause, as in the hypothetical \cref{ex:tomorrow_boil_mi
 \begin{example}
   \label{ex:tomorrow_boil_millet}
   \gloss
-  nicawat & tomorrow \\
+  \highlight{nicawat} & tomorrow \\
   Hayat & Khayat \\
   ta- & ACC \\
   keʔiti & millet \\
   caʔi- & LOC \\
-  rewtew & hut \\
+  \highlight{rewtew} & hut \\
   may- & INS \\
-  sakep & pot \\
-  ∅= & 3SG.NOM \\
+  \highlight{sakep} & pot \\
   kuŋi & boil \\
+  =∅ & 3SG.NOM \\
   \tr \textit{Tomorrow}, Khayat will boil millet with a pot in a hut.
 \end{example}
