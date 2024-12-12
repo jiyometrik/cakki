@@ -35,7 +35,7 @@ following examples carrying the same meaning, \cref{ex:dog_pamat_hates,ex:hates_
   Pamat & Pamat \\
   yahin & hate \\
   =∅ & 3SG.NOM \\
-  \tr As for (a certain) \textit{dog}, Pamat hates it.
+  \tr A \textit{dog} is what Pamat hates.
 \end{example}
 
 \begin{example}
@@ -56,7 +56,7 @@ the postposition \rom{ʔumul} (`below') comes \textit{after} the noun to which i
 \begin{example}
   \label{ex:luan_kills_chicken_at_tree}
   \gloss
-  Luan & Luan \\
+  Luwan & Luan \\
   caʔi- & LOC \\
   \highlight{raŋuy} & willow \\
   \highlight{ʔumul} & below \\
@@ -65,7 +65,7 @@ the postposition \rom{ʔumul} (`below') comes \textit{after} the noun to which i
   ʔin- & PFV \\
   wahas & kill \\
   =∅ & 3SG.NOM \\
-  \tr As for \textit{Luan}, he has killed a chicken below a willow tree.
+  \tr \textit{Luan} has killed a chicken below a willow tree.
 \end{example}
 
 \section{Stative verbs}
@@ -105,24 +105,48 @@ is not immediately apparent. This section illustrates how \langname{} handles su
 Existential clauses are clauses that, when translated to English, usually
 begin with `there exist(s)' or `there are'. For such clauses,
 \langname{} employs the intransitive verb \rom{semat} (`to stand') as an existential
-verb, as in \cref{ex:theres_a_dog_here}.
+verb, as in \cref{ex:theres_a_dog_here,ex:two_sens}.
 
 \begin{example}
   \label{ex:theres_a_dog_here}
   \gloss
   pariw & dog \\
-  'ita & one \\
+  ʔita & one \\
   kisak & CLF.small.animal \\
   caʔi- & LOC \\
   taŋamuy & here \\
-  semat & stand \\
+  \highlight{semat} & stand \\
   =∅ & 3SG.NOM \\
   \tr There is one dog here.
 \end{example}
 
+\begin{example}
+  \label{ex:two_sens}
+  \gloss
+  caʔi- & LOC \\
+  Paŋkur & Bangur \\
+  maruŋ & honorific.male \\
+  Sen & Sen \\
+  rawa & two \\
+  ʔacak & CLF.human \\
+  \highlight{semat} & stand \\
+  halwat & 3PL \\
+  ta- &  ACC \\
+  Rupisen & Sen.Robi \\
+  ni & and \\
+  ta- & ACC \\
+  Tiripsen & Sen.Dilip \\
+  ʔamuy & DEM.PROX \\
+  \lit In Bangur, two Mr Sen--s stand. They are that Robi Sen and that Dilip Sen.
+  \tr There are two Sen--s in Bangur, Robi Sen and Dilip Sen.
+  \source \textsc{5moyd} \#2021
+\end{example}
+
 \subsection{Locative clauses}
 Locative clauses, in which the subject is \textit{in} a certain location, the
-\acrfull{loc} is employed together with the `existential' verb \rom{semat} (`to stand'), as in \cref{ex:mother_is_at_the_forest}.
+\acrfull{loc} is employed together with the `existential' verb \rom{semat} (`to stand'),
+as in \cref{ex:mother_is_at_the_forest}.
+
 \begin{example}
   \label{ex:mother_is_at_the_forest}
   \gloss
@@ -154,29 +178,29 @@ lacks copulae. See \cref{ex:he_is_pamat,ex:that_is_your_chicken}.
   \gloss
   ʔaliŋ & DEM.DIST \\
   ta- & ACC \\
-  ker= & 2SG.GEN \\
+  ka= & 2SG.GEN \\
   carik & chicken \\
   \tr That's your chicken.
 \end{example}
 
 Adjectival clauses, where Y in the `X is Y' format is an adjective, are handled
 in the same manner. In this case, adjectives are treated as verbs, and thus
-take on pronoun clitics, as in \cref{ex:khayat_is_tall,my_clothes_were_beautiful}.
+take on pronoun clitics, as in \cref{ex:khayat_is_tall,ex:my_clothes_were_beautiful}.
 \begin{example}
   \label{ex:khayat_is_tall}
   \gloss
   Hayat & Khayat \\
-  ŋela^ & long \\
+  ŋela^ & PROG \\
   ŋelahu & long \\
   =∅ & 3SG.NOM \\
-  \tr Hayat is tall.
+  \tr Hayat is (still) tall.
 \end{example}
 
 \begin{example}
   \label{ex:my_clothes_were_beautiful}
   \gloss
   se= & 1SG.GEN \\
-  kan- & NMLZ.PARG \\
+  ʔanu- & NMLZ.PARG \\
   watis & wear \\
   puŋ- & PST \\
   culi^ & PROG \\
@@ -247,15 +271,15 @@ demonstrative noun combined with another modifier.
   \tr that/yonder black dog
 \end{example}
 
-Contrastingly, \textbf{relative clauses} delimited by the \acrfull{rel} precede their attached noun, as in \cref{ex:sleeping_dog}.
-More detail into relative clauses will appear in future chapters.
+Contrastingly, \textbf{relative clauses} delimited by the \acrfull{rel} precede
+their attached noun, as in \cref{ex:sleeping_dog}. More detail into relative
+clauses will appear in future chapters.
 \begin{example}
   \label{ex:sleeping_dog}
-  % \script pariw ʔaŋ ʔinwasuwasu
   \gloss
   wasu^ & PROG \\
   wasu & sleep \\
-  \highlight{ʔaŋ} &  REL \\
+  \highlight{ʔaŋ} & REL \\
   \highlight{pariw} & dog \\
   \tr a dog which is sleeping
 \end{example}
@@ -285,12 +309,13 @@ as in \cref{ex:their_boar}.\sidenote{Case markers and pronoun clitics will be di
 \end{example}
 
 Where more than one possession occurs (i.e.~the possessors are `nested'),
-each subsequent possessor is simply stacked before the previous one, as in \cref{ex:his_grandmothers_doctors_dog}.
+each subsequent possessor is simply stacked before the previous one, as in
+\cref{ex:his_grandmothers_doctors_dog}.
 \begin{example}
   \label{ex:his_grandmothers_doctors_dog}
   \gloss
   me= & 3SG.GEN \\
-  miwtiw & paternal.grandmother \\
+  miwtiw & paternal.grandmother \\ % mawtaŋ - paternal.grandfather
   me= & 3SG.GEN \\
   ʔaca- & NMLZ.AARG \\ % agentive nominalizer
   ŋurus & drug \\
@@ -301,7 +326,7 @@ each subsequent possessor is simply stacked before the previous one, as in \cref
 
 In short, nominal referents and their modifiers adopt the following general ordering.
 \begin{tightcenter}
-  relative clause -- possessor -- \textbf{referent} -- adjective -- classifier -- number -- demonstrative
+  relative clause -- possessor -- \textbf{referent} -- adjective -- number -- classifier -- demonstrative
 \end{tightcenter}
 
 \section{Adpositional phrases}
