@@ -20,6 +20,11 @@
 \LoadClass{book}
 \RequirePackage{geometry}
 
+%* Titles
+\RequirePackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\sffamily\LARGE\color{steel}}{\thechapter\hspace{.5em}\vrule width .7pt}{.5em}{}
+\titleformat{\section}[hang]{\normalfont\sffamily\Large\color{steel}}{\thesection\hspace{.5em}\vrule width .7pt}{.5em}{}
+\titleformat{\subsection}[hang]{\itshape\sffamily\large\color{steel}}{\thesubsection}{.5em}{}
 
 %* Header/footer
 \RequirePackage{emptypage}

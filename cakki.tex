@@ -1,3 +1,4 @@
+\PassOptionsToPackage{backend=biber,style=apa,sorting=ynt}{biblatex}
 \PassOptionsToPackage{en-US}{datetime2}
 \documentclass[11pt, a4paper, sidefootnotes, english]{pancake-book}
 
@@ -8,23 +9,22 @@
 \makeglossaries
 
 \begin{document}
-\title{\langname: An Incomplete Grammar}
-\author{Jamie Ziyi Li}
+\title{A rough grammar of \langname}
+\author{Jamie Li}
 \date{\DTMusedate{startdate} -- \DTMtoday}
 
 \frontmatter
 \maketitle
 \tableofcontents
-\listoftables
-\listoffigures
 
 \mainmatter
+\setcounter{chapter}{-1}
 \input{infofiles/introduction}
 \input{infofiles/phono}
 \input{infofiles/clauses}
-\input{infofiles/nominals}
+\input{infofiles/verbs}
 
 \backmatter
 \printglossary
-\printbibliography
+% \printglossaries
 \end{document}

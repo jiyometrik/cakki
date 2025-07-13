@@ -1,315 +1,70 @@
 \chapter{Phonology}
 \label{cha:phonology}
-
-This chapter concerns the phonological aspects of \langname, including its
-phonemes (\cref{sec:inventory}) and phonotactics (\cref{sec:phonotactics}). Notes
-on allophonic variation (\cref{sec:allophonic_variation}) and the romanisation
-system used throughout this reference grammar (\cref{sec:romanisation}) follow.
+Rather self-explanatory chapter title, don't you think?
 
 
-\section{Phonemic inventory}
-\label{sec:inventory}
-This section outlines the phonemes \langname{} contains, and briefly discusses
-allophonic variation.
+\section{Consonants}
 
-\subsection{Consonants}
-\langname{} has a relatively small set of consonants, as detailed in the following
-table (\cref{tab:consonants}). All symbols below can be found in the International Phonetic
-Alphabet.
+\langname{} has a medium-sized set of consonants---\cref{tab:consonants}.
 
 \begin{table}[htbp]
-  \centering
-  \begin{tabular}{r c c c c c}
+  \begin{tabular}{r c c c c}
     \toprule
-    & \textbf{Labial} & \textbf{Alveolar} & \textbf{Palatal} & \textbf{Velar} & \textbf{Glottal} \\
+                & {labial} & {alveolar}       & {palatal}      & {velar}         \\
     \midrule
-    \textbf{Nasal} & m & n & & ŋ & \\
-    \textbf{Plosive} & p & t & & k & ʔ \\
-    \textbf{Affricate} & & t͡s & & & \\
-    \textbf{Fricative} & & s & & x & \\
-    \textbf{Tap} & & ɾ & & & \\
-    \textbf{Approximant} & & l & j & w & \\
+    {nasal}     & m        & n                &                & ŋ \orthtext{ng} \\
+    {plosive}   & p\;b     & t\;d             &                & k               \\
+    {affricate} &          & t͡s \orthtext{ts} &                &                 \\
+    {fricative} &          & s                &                & x \orthtext{h}  \\
+    {liquid}    &          & ɾ \orthtext{r}   & j \orthtext{y} & w               \\
     \bottomrule
   \end{tabular}
-  \caption{Consonant inventory of \langname{}}
+  \caption{Consonant inventory}
   \label{tab:consonants}
 \end{table}
 
-As detailed in \cref{ex:consonants_initial}, all consonants can take initial positions in syllables.
-Notions of syllables and their structure will be discussed later in \cref{sec:phonotactics}.
-\begin{columns}
-  \label{ex:consonants_initial}
-  \cols \phomtext{m} & \phomtext{\highlight{m}əluk} & to fight
-  \cols \phomtext{n} & \phomtext{\highlight{n}iniw} & breast
-  \cols \phomtext{ŋ} & \phomtext{\highlight{ŋ}əʔ} & eye
-  \cols \phomtext{p} & \phomtext{\highlight{p}istə} & to understand
-  \cols \phomtext{t} & \phomtext{\highlight{t}əŋa} & to slit
-  \cols \phomtext{k} & \phomtext{\highlight{k}əɾaʔ} & brittle
-  \cols \phomtext{ʔ} & \phomtext{\highlight{ʔ}uli} & stomach
-  \cols \phomtext{t͡s} & \phomtext{\highlight{t͡s}akki} & language
-  \cols \phomtext{s} & \phomtext{\highlight{s}uxal} & to argue
-  \cols \phomtext{x} & \phomtext{\highlight{x}aʔus} & to sigh
-  \cols \phomtext{ɾ} & \phomtext{\highlight{ɾ}aŋuj} & willow
-  \cols \phomtext{l} & \phomtext{\highlight{l}uwan} & male name
-  \cols \phomtext{j} & \phomtext{\highlight{j}amu} & to be happy
-  \cols \phomtext{w} & \phomtext{\highlight{w}atinak} & to accuse
-\end{columns}
+The intervocalic sequences \phomtext{t.s t͡s} and \phomtext{t͡sː t.t͡s} have no minimal pairs.
 
-\subsection{Vowels}
-\langname{} also has a relatively small inventory of vowels, represented in \cref{fig:vowels}.
-It has five monophthongs largely spanning the entire vowel space, and no diphthongs.
-\begin{figure}[htbp]
-  \centering
-  \begin{vowel}
-    \vpoint{0}{3}{i}
-    % \vpoint{1}{3}{i}
-    \vpoint{2}{3}{u}
-    \vpoint{1}{1.5}{ə}
-    \vpoint{1}{0}{a}
-  \end{vowel}
-  \caption{Vowel inventory of \langname{}}
-  \label{fig:vowels}
-\end{figure}
+The velar nasal \phomtext{ŋ} is able to nasalise the preceeding vowel syllable-finally, e.g. \phomtext{oŋ} becomes \phontext{õ\allo õɰ̃\allo õŋ}.
+The voiced plosives \phomtext{b d} are softened \phontext{v ɾ} intervocalically and fortified \phontext{p t} syllable-finally.
+The velar fricative \phomtext{x} can also be realised \phontext{ɰ\allo h\allo ɦ}.
 
-Because few distinct vowel phonemes exist in the language, the realisations of
-each vowel vary in different phonemic environments. However, neither length nor pitch
-are distinguished in the language.
+\section{Vowels}
 
-Some dialects of \langname{} may be starting to develop pitch accent,
-but oral evidence for this is scarce.\sidenote{Do we want to add a tone system?}
+\langname{} also has a relatively small inventory of monophthongs---\cref{tab:vowels}.
 
-
-\section{Phonotactics}
-\label{sec:phonotactics}
-This section outlines the syllable structure of \langname{}, before describing,
-as its name aptly suggests, the language's phonotactics---how sounds are put together
-to make `legal' words.
-
-\subsection{Syllable structure}
-Broadly, the syllable structure is CV(C). C represents any consonant, and V represents
-any monophthong.
-
-\Cref{ex:syllable_patterns} contains a selection of words with varying syllable patterns, up to
-roots containing two syllables.
-\begin{columns}
-  \label{ex:syllable_patterns}
-  \cols CV & \phomtext{ni} & and
-  \cols CVC & \phomtext{ŋak} & to whine
-  \cols CV.CV & \phomtext{pa.si} & to walk
-  \cols CVC.CV & \phomtext{jak.ti} & red bean
-  \cols CV.CVC & \phomtext{t͡sa.ʔut} & goat milk
-  \cols CVC.CVC & \phomtext{ɾən.taw} & to laud
-\end{columns}
-
-Most \langname{} roots are disyllabic. Where partial or full reduplication
-is applied, roots may extend to three or four syllables.
-
-\subsection{Stress and prosody}
-The above discussion on \detail{syllable} structure may be misleading---\langname{} is
-a mora-timed language. The language obeys the following rules for determining
-the number of morae a syllable contains.
-\begin{itemize}
-  \item The onset consonant does not contribute to the number of morae in the syllable, since every syllable must contain an onset.
-  \item A syllable is \detail{monomoraic} if it is open (CV).
-  \item A syllable is \detail{bimoraic} if it is closed (CVC).
-\end{itemize}
-
-Nominally, stress falls on the syllable which contains the penultimate mora.
-To illustrate, \cref{tab:morae_patterns} contains the same selection of words as \cref{ex:syllable_patterns},
-this time with the number of morae and the stress indicated.
-
-\begin{table}[htpb]
-  \centering
-  \begin{tabular}{r r l l}
-    \toprule
-    \textbf{Syllable structure} & \textbf{Morae} & \textbf{Stress pattern} & \textbf{Gloss} \\
-    \midrule
-    CV & 1 & \phomtext{ˈni} & and \\
-    CVC & 2 & \phomtext{ˈŋak} & to whine \\
-    CV.CV & 1--1 & \phomtext{ˈpa.si} & to walk \\
-    CVC.CV & 2--1 & \phomtext{ˈjak.ti} & red bean \\
-    CV.CVC & 1--2 & \phomtext{t͡sa.ˈʔut} & goat milk \\
-    CVC.CVC & 2--2 & \phomtext{ɾən.ˈtaw} & to laud \\
-    \bottomrule
-  \end{tabular}
-  \caption{Morae patterns in disyllabic roots}
-  \label{tab:morae_patterns}
-\end{table}
-
-\subsection{Phonotactics---within the syllable}
-Below are general phonotactic rules governing the structure of individual \langname{} syllables.
-\begin{itemize}
-  \item A syllable cannot both start and end with \phomtext{ʔ}.
-  \item The combinations \phomtext{ji ji wu ij ij uw} are disallowed.
-\end{itemize}
-
-Curiously, a pseudo--vowel harmony system may be starting to emerge.
-\langname{} roots seldom contain \phomtext{i}
-and the other high vowels \phomtext{i u} together. Where \phomtext{i} is found,
-the central vowels \phomtext{ə a} are likely to coexist within the same root instead.
-However, all other vowels may coexist in the same word. Therefore, the words
-\phomtext{ʔiɾə} and \phomtext{ʔiɾa} are likely to exist, much more so than
-the words \phomtext{ʔiɾi} and \phomtext{ʔiɾu}.\sidenote{This may be simply speculation, since \phomtext{i} is the least commonly occurring monophthong.}
-
-\subsection{Phonotactics---between syllables}
-The consonant sequence \phomtext{ʔʔ} is disallowed\sidenote{Pronouncing this would be a nightmare!}.
-% Between syllables, \phomtext{ʔ} may only be placed between two vowels.
-% \phomtext{Cʔ} and \phomtext{ʔC} sequences are disallowed, including \phomtext{ʔʔ}\sidenote{Pronouncing this would be a nightmare!}.
-
-Only the plosive--affricate sequences outlined in \cref{tab:stop_affricate} are allowed.
-Each row represents the first consonant in the cluster; each column represents the second consonant in the cluster, hence
-\phomtext{ʔə\highlight{p.t͡s}ə} is an allowed cluster, whereas \phomtext{ʔə\highlight{t͡s.p}ə} is not.
 \begin{table}[htbp]
-  \centering
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{r c c}
     \toprule
-    & p & t & t͡s & k \\
+         & front & non-front \\
     \midrule
-    p & + & + & + & + \\
-    t & -- & + & -- & -- \\
-    t͡s & -- & -- & + & -- \\
-    k & -- & + & + & + \\
+    high & i     & o         \\
+    low  & e     & a         \\
     \bottomrule
   \end{tabular}
-  \caption{Allowed plosive--affricate sequences}
-  \label{tab:stop_affricate}
+  \caption{Vowel inventory}
+  \label{tab:vowels}
 \end{table}
 
-Fricatives and approximants may cluster with plosives (excluding \phomtext{ʔ}), fricatives
-and approximants between two syllables.
+The mid vowels \phomtext{e o} can be lowered \phontext{ɛ ɔ} in closed syllables.
 
-Where a nasal and an obstruent cluster, the nasal should match its place of articulation.
-To illustrate, \phomtext{ʔə\highlight{m.p}ə} would be a valid word, but not
-\phomtext{ʔə\highlight{m.t͡s}ə} or \phomtext{ʔə\highlight{n.p}ə}.
+Although \langname{} lacks diphthongs, any combination of monophthong and glide \phomtext{j w}
+can function as the rime of a syllable, except \orthtext{iy}. \langname's syllable structure
+also permits vowel hiatus, except vowel sequences 3 or longer containing two consecutive identical vowels.
 
+\section{Syllable structure}
+\langname~permits a maximum syllable structure of (C)V(C), where C is any consonant,
+and V any monophthong. The syllable-initial sequence \orthtext{yi}---which resolves to \orthtext{i}---is prohibited, as is
+the intervocalic sequence \orthtext{rr}, which resolves to \orthtext{r}.
 
-\section{Allophonic variation}
-\label{sec:allophonic_variation}
+\section{Assimilation patterns}
+In a plosive--nasal sequence (between syllables), the plosive and nasal metathesise, and
+the nasal assimilates to the place of articulation of the plosive. \phomtext{pak.ma} becomes
+\orthtext{pangka}, for instance.
 
-Due to the rather minimalistic phonology of \langname, allophonic variation
-is rife in various phonological environments. We discuss allophonic variation
-in consonants and vowels respectively.
+In a voiced plosive--voiceless plosive sequence, the voiced plosive devoices. \phomtext{pab.ka pad.ka}
+become \orthtext{papka patka}, for instance.
 
-\subsection{Plosives}
-The voiceless plosives \phomtext{p t k} (except \phomtext{ʔ}) become voiced commonly after nasal consonants, as in \cref{ex:plosives_middle}.
-No minimal pairs between plosives \phomtext{p t k} and their voiced allophones \phontext{b d ɡ} exist, however.
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:plosives_middle}
-  \cols \phomtext{ʔum\highlight{p}uj} & \phontext{ʔʊm.\highlight{b}ʊj} & birch
-  \cols \phomtext{tən\highlight{t}u} & \phontext{tən.\highlight{d}u} & rock
-  \cols \phomtext{xaŋ\highlight{k}a} & \phontext{xaŋ.\highlight{ɡ}a} & firewood
-\end{columns}
-
-Plosives in syllable-final positions (except \phomtext{ʔ})
-become unreleased, as in \cref{ex:plosives_final}. In particular, syllable-final
-\phomtext{k} is often realised as
-\phontext{ʔ} due to their relative proximity in the oral cavity.
-
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:plosives_final}
-  \cols \phomtext{saɾa\highlight{p}} & \phontext{sa.ɾa\highlight{p̚}} & dawn
-  \cols \phomtext{naŋki\highlight{t}} & \phontext{naŋ.ɡɪ\highlight{t̚}} & to feed (livestock)
-  \cols \phomtext{ʔali\highlight{k}} & \phontext{ʔa.lɪ\highlight{ʔ}} & daikon
-  \cols \phomtext{ŋu\highlight{k}tu} & \phontext{ŋʊ\highlight{ʔ}.tu} & to pound
-\end{columns}
-
-\subsection{\phontext{x\allo h\allo ɦ} alternation}
-Due to its proximity to the glottis, the velar fricative \phomtext{x} may be
-realised as \phontext{h} in all environments for convenience. Fairly widespread
-among younger speakers, a \phomtext{x} > \phomtext{h} sound shift may be possible.
-
-More interestingly, however, \phontext{x\allo h} may be further lenited to \phontext{ɦ\allo ∅}
-intervocalically. Vowel hiatus may arise because of this, violating the general rule that
-all syllables must begin with a consonant, as in \cref{ex:hiatus}.
-
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:hiatus}
-  \cols \phomtext{ja\highlight{x}in} & \phontext{ja\highlight{.}in} & to hate
-  \cols \phomtext{mina\highlight{x}aw} & \phontext{mi.na\highlight{.}aw\allo mi.na\highlight{ː}w} & bamboo
-\end{columns}
-
-\subsection{\phontext{ɾ\allo d} alternation}
-The tap \phomtext{ɾ} may sometimes be realised as \phontext{d}, or even \phontext{ð}
-in consonant clusters (where a closed syllable meets another syllable starting with a consonant)
-and syllable-finally, as in \cref{ex:r_d}.
-This does not clash with \phomtext{t} being realised as \phontext{d} in voiced contexts.
-
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:r_d}
-  \cols \phomtext{xu\highlight{ɾ}na} & \phontext{xʊ\highlight{d}.na\allo xʊ\highlight{ð}.na} & moon
-  \cols \phomtext{nawa\highlight{ɾ}} & \phontext{na.wa\highlight{d}} & to greet
-\end{columns}
-
-\subsection{\phomtext{l}--vocalisation}
-The lateral approximant \phomtext{l} can usually be alternated with \phontext{w\allo ʊ̯},
-as in \cref{ex:l_vocalisation}. This happens most frequently syllable-finally, yet never
-happens syllable-initially. This occurrence is fairly common among younger speakers, although it
-is considered improper.
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:l_vocalisation}
-  \cols \phomtext{ʔəni\highlight{l}} & \phontext{ʔə.nɪ\highlight{ʊ̯}} & aubergine
-  \cols \phomtext{mə\highlight{l}uk} & \phontext{mə.\highlight{l}uʔ\allo mə.\highlight{w}uʔ} & to fight
-\end{columns}
-
-\subsection{Vowels in closed syllables}
-As shown amply in the above examples, the monophthongs \phontext{i u} tend to
-weaken or have their tongue root positions retracted in closed syllables, giving
-approximately \phomtext{ɪ ʊ}, seen in \cref{ex:vowel_weakening}.
-\begin{columns}[cols.markup=\mutations]
-  \label{ex:vowel_weakening}
-  \cols \phomtext{nin\highlight{i}w} & \phontext{ni.n\highlight{ɪ}w} & breast
-  \cols \phomtext{ʔal\highlight{i}k} & \phontext{ʔa.l\highlight{ɪ}ʔ} & daikon
-  \cols \phomtext{ʔ\highlight{u}mp\highlight{u}j} & \phontext{ʔ\highlight{ʊ}m.b\highlight{ʊ}j} & birch
-\end{columns}
-In particularly divergent dialects, the combinations \phomtext{iw uj} may even
-yield \phontext{ew oj}.\sidenote{Perhaps this also signifies the first step towards the monophthongisation of vowel--approximant sequences!}
-
-
-\section{Romanisation}
-\label{sec:romanisation}
-
-\Cref{tab:consonants_romanised} shows the romanised versions of each consonant.
-For clarity, each consonant phoneme is spelt with only one character. In addition,
-the following stylistic choices have been made:
-\begin{itemize}
-  \item Writing \phomtext{t͡s} as \rom{ts} may cause confusion with \phomtext{t.s}, so \rom{c} is used instead.
-  \item Writing \phomtext{ŋ} as \rom{ng} may cause confusion with \phomtext{ŋ.ɡ}, so \rom{ŋ} is used instead.
-  \item Writing \phomtext{ɾ} as its IPA symbol is cumbersome, so \rom{r} is used instead.
-\end{itemize}
-The romanised consonants are shown in \cref{tab:consonants_romanised}.
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{r c c c c c}
-    \toprule
-    & \textbf{Labial} & \textbf{Alveolar} & \textbf{Palatal} & \textbf{Velar} & \textbf{Glottal} \\
-    \midrule
-    \textbf{Nasal} & \rom{m} & \rom{n} & & \rom{ŋ} & \\
-    \textbf{Plosive} & \rom{p} & \rom{t} & & \rom{k} & \rom{ʔ} \\
-    \textbf{Affricate} & & \rom{c} & & & \\
-    \textbf{Fricative} & & \rom{s} & & \rom{h} & \\
-    \textbf{Tap} & & \rom{r} & & & \\
-    \textbf{Approximant} & & \rom{l} & \rom{y} & \rom{w} & \\
-    \bottomrule
-  \end{tabular}
-  \caption{Romanised consonants in \langname{}}
-  \label{tab:consonants_romanised}
-\end{table}
-
-The vowels will be romanised as in \cref{fig:vowels_romanised}. Due to the relative
-difficulty in typing the letter \rom{ə}, it will be romanised with \rom{e} instead.
-All other monophthongs remain as they are in the IPA.
-\begin{figure}[htbp]
-  \centering
-  \begin{vowel}
-    \vpoint{0}{3}{\rom{i}}
-    % \vpoint{1}{3}{\rom{i}}
-    \vpoint{2}{3}{\rom{u}}
-    \vpoint{1}{1.5}{\rom{e}}
-    \vpoint{1}{0}{\rom{a}}
-  \end{vowel}
-  \caption{Romanised vowels in \langname{}}
-  \label{fig:vowels_romanised}
-\end{figure}
-
-Every phoneme will be spelt out in its original form: no allophony will be indicated, and glottal stops
-will always be written. Since stress is non-contrastive, stress will not be indicated.
+\section{Stress and prosody}
+\langname{} has regular penultimate stress. The stressed syllbale is often accompanied
+by a higher pitch, and/or a lengthening of the vowel.

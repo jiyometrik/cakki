@@ -3,8 +3,10 @@
 
 \RequirePackage[nogroupskip,nonumberlist]{glossaries}
 \RequirePackage{glossary-mcols}
-\RequirePackage[nostandards,mcolblock]{baabbrevs}
-\RequirePackage[noleipzig, 2level, columns, contours, nostdabbrevs]{baarux}
+% \RequirePackage[nostandards,mcolblock]{baabbrevs}
+% \RequirePackage[noleipzig, 2level, columns, contours, nostdabbrevs]{baarux}
+\RequirePackage[nostandards]{baabbrevs}
+\RequirePackage[noleipzig, aligned, nostdabbrevs]{baarux}
 \RequirePackage{tikzvowel, phonrule}
 
 \RequirePackage{afterpackage}
@@ -22,28 +24,39 @@
   \newcommand{\crefrangeconjunction}{ through }
 }
 
-\newcommand{\native}[1]{\textbf{#1}}
-\newcommand{\rom}[1]{\textit{#1}}
+% ###
+% \newcommand{\native}[1]{\textbf{#1}}
+% \newcommand{\rom}[1]{\textit{#1}}
+% ###
+\newcommand{\native}[1]{\textcolor{pink}{\textbf{#1}}}
+\newcommand{\rom}[1]{\textcolor{pink}{#1}}
 \newcommand{\ifprinted}[2]{\setbox0=\hbox{#1}\ifdim\wd0=0pt\else#2\fi}
 \newcommand{\trans}[1]{\ifprinted{#1}{`#1'}}
 
+% \newcommand{\phontext}[1]{[#1]}
+% \newcommand{\phomtext}[1]{/#1/}
+% \newcommand{\morphtext}[1]{⫽#1⫽}
+% \newcommand{\orthotext}[1]{⟨{\color{green}#1}⟩}
+% ###
 \newcommand{\phontext}[1]{[#1]}
-\newcommand{\phomtext}[1]{/#1/}
-\newcommand{\morphtext}[1]{⫽#1⫽}
-\newcommand{\orthotext}[1]{⟨#1⟩}
+\newcommand{\phomtext}[1]{/{#1}/}
+\newcommand{\orthtext}[1]{⟨\textcolor{pink}{#1}⟩}
+% ###
 
-\let\origphonc\phonc
-\def\phonc{\setlength{\tabcolsep}{3pt}\origphonc}
-\let\origphon\phon
-\def\phon{\setlength{\tabcolsep}{3pt}\origphon}
-\AfterPackage{parskip}{
-  \addbaaruhook{everyexesi}{\setlength{\topsep}{0pt}}
-  \let\origendcolumns\endcolumns
-  \def\endcolumns{\origendcolumns\vspace{-\baaruuse{colspacing}}}
-  \let\origcolumns\columns
-  \def\columns{\vspace{-\baaruuse{colspacing}}\origcolumns}
-}
+% \let\origphonc\phonc
+% \def\phonc{\setlength{\tabcolsep}{3pt}\origphonc}
+% \let\origphon\phon
+% \def\phon{\setlength{\tabcolsep}{3pt}\origphon}
+% \AfterPackage{parskip}{
+%   \addbaaruhook{everyexesi}{\setlength{\topsep}{0pt}}
+%   \let\origendcolumns\endcolumns
+%   \def\endcolumns{\origendcolumns\vspace{-\baaruuse{colspacing}}}
+%   \let\origcolumns\columns
+%   \def\columns{\vspace{-\baaruuse{colspacing}}\origcolumns}
+% }
 
+%* Some baarux theme customisations
+\baaruset{script.markup=\rom}
 %* Document specific spacing
 \baaruset{junctureoutersep=0.3ex, junctureinnersep=.4ex}
 
@@ -56,4 +69,3 @@
 \newbaarulinetype{script}{romanization}{}
 \newbaarulinetype{insert}{tikz}{\tikz[baaru]}
 \tikzset{baaru/.style={baseline=0.3ex}}
-\newbaarulinetype{tr}{lit}{\textit{Lit: }}

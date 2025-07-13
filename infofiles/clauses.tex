@@ -1,371 +1,141 @@
-\chapter{Clause structure}
+\chapter{Clauses}
+\label{ch:clauses}
+This chapter discusses the basic clause structures of \langname{}.
 
-This chapter briefly discusses the syntactical structure of \langname{}.
-It discusses also \langname{}'s case system, and its prioritisation of nouns'
-roles in a clause.
+\section{Syntax}
+\langname{} features \detail{symmetrical voice}, where the role of the primary argument
+(or the argument \detail{in focus}) is encoded onto the verb itself. There are four voices in
+\langname{}: \detail{actor voice} (\AV), \detail{patient voice} (\PV), \detail{locative voice} (\LV)
+and \detail{instrumental voice} (\IV).
+\begin{examples}
+	\ex
+	\label{ex:actor_voice}
+	\script ngain yeo aw amospe \\
+	\bits nga -in yeo aw amospe \\
+	\gloss eat AV child OBL crab \\
+	\tr A child eats crab.
+\end{examples}
 
-% STICK WITH NOM-ACC ALIGNMENT
-\section{Word order}
-\langname{} is, by default, a subject--object--verb language.
-This is exemplified in \cref{ex:pamat_hates_dog}. The subject of a transitive verb
-is placed at the head of the sentence, then the direct object, then the verb itself.
+\begin{examples}
+	\ex
+	\label{ex:patient_voice}
+	\script nganak amospe ya yeo \\
+	\bits nga -nak amospe ya yeo \\
+	\gloss eat PV crab GEN child \\
+	\tr Crab is eaten by the child.
+\end{examples}
 
-\begin{example}
-  \label{ex:pamat_hates_dog}
-  \gloss
-  Pamat & Pamat \\
-  ta- & ACC \\
-  pariw & dog \\
-  yahin & hate \\
-  =∅ & 3SG.NOM \\
-  \tr Pamat hates (a certain) dog.
-\end{example}
+\begin{examples}
+	\ex
+	\label{ex:locative_voice}
+	\script ngaong sekio aw amospe ya yeo \\
+	\bits nga -ong sekio aw amospe ya yeo \\
+	\gloss eat LV hut OBL crab GEN child \\
+	\tr A hut is eaten crab in by a child.
+\end{examples}
 
-Yet, word order is shifted around very frequently. Usually, the head of the clause
-is occupied by its \textit{focus}, the bit of information that the speaker wishes to emphasise
-the most. The focus is followed by strings of additional information, usually
-adhering to the same SOV order as before. Contrast \cref{ex:pamat_hates_dog} with the
-following examples carrying the same meaning, \cref{ex:dog_pamat_hates,ex:hates_pamat_dog}.
+\begin{examples}
+	\ex
+	\label{ex:instrumental_voice}
+	\script ngapaw yeo roakyo amospe \\
+	\bits nga -paw yeo roa =kyo aw amospe \\
+	\gloss eat IV child hand 3SG.POSS OBL crab \\
+	\tr A hut is eaten crab in by a child.
+\end{examples}
 
-\begin{example}
-  \label{ex:dog_pamat_hates}
-  \gloss
-  ta- & ACC \\
-  \highlight{pariw} & dog \\
-  Pamat & Pamat \\
-  yahin & hate \\
-  =∅ & 3SG.NOM \\
-  \tr A \textit{dog} is what Pamat hates.
-\end{example}
+For transitive clauses, \langname{} adopts a verb-initial word order.
+This is true for monovalent (or \detail{intransitive}) verbs too, where \AV~is the default.
+\begin{examples}
+	\ex
+	\label{ex:the_child_dies}
+	\script rohakin yeo
+	\bits rohak =in yeo
+	\gloss die AV child
+	\tr A child dies.
+\end{examples}
 
-\begin{example}
-  \label{ex:hates_pamat_dog}
-  \gloss
-  \highlight{yahin} & hate \\
-  =∅ & 3SG.NOM \\
-  Pamat & Pamat \\
-  ta- & ACC \\
-  pariw & dog \\
-  \tr \textit{To hate}, is what Pamat does to (a certain) dog.
-\end{example}
+Verbs that take no arguments (i.e. have \detail{zero valency}) are left alone, without a voice.
+\begin{examples}
+	\ex
+	\label{ex:its_raining}
+	\script rea pohipohi
+	\bits rea pohi^ pohi
+	\gloss now PROG rain
+	\tr It's raining now.
+\end{examples}
 
-\subsection{Postpositions}
-Although later chapters will cover postpositions (along with converbs) in greater detail,
-\textbf{postpositions} typically follow their attached noun. Observe \cref{ex:luan_kills_chicken_at_tree}:
-the postposition \rom{ʔumul} (`below') comes \textit{after} the noun to which it is attached, \rom{raŋuy} (`willow').
-\begin{example}
-  \label{ex:luan_kills_chicken_at_tree}
-  \gloss
-  Luwan & Luan \\
-  caʔi- & LOC \\
-  \highlight{raŋuy} & willow \\
-  \highlight{ʔumul} & below \\
-  ta- & ACC \\
-  carik & chicken \\
-  ʔin- & PFV \\
-  wahas & kill \\
-  =∅ & 3SG.NOM \\
-  \tr \textit{Luan} has killed a chicken below a willow tree.
-\end{example}
+\section{Nominal clauses}
+\langname~lacks a copula. This is easily rectified by a verbalizer conveying the meaning of `to be'---\rom{ko-} (from \rom{koay} `to live').
+\begin{examples}
+	\ex
+	\label{ex:you_bitch}
+	\script koyebao
+	\bits ko- yeba =ao
+	\gloss VBZ.be dog 2SG.NOM
+	\tr You're a dog.
+\end{examples}
 
-\section{Stative verbs}
-Stative verbs, in contrast to dynamic verbs, are intransitive
-verbs without a direct object. In \langname{}, this is equivalent
-to omitting the object role in a clause, where the default order is
-SV (subject--verb). This is seen in \cref{ex:kawam_walking}, where the focus is the
-subject, \rom{kawam} (a proper name).
-\begin{example}
-  \label{ex:kawam_walking}
-  \gloss
-  Kawam & Kawam \\
-  pasi^ & PROG \\
-  pasi & walk \\
-  =∅ & 3SG.NOM \\
-  \tr Kawam is walking.
-\end{example}
+Similarly, \langname~lacks a distinct verb for `to have'---\rom{am-} (from \rom{ama} `to carry').
+\begin{examples}
+	\ex
+	\label{ex:you_have_a_dog}
+	\script amyebao
+	\bits am- yeba =ao
+	\gloss VBZ.have dog 2SG.NOM
+	\tr You have a dog.
+\end{examples}
 
-As with transitive (or dynamic) verbs, the order in which
-the subject and the verb occur can be reversed, so that the verb becomes the focus, as in
-the equivalent \cref{ex:walking_kawam}.
-\begin{example}
-  \label{ex:walking_kawam}
-  \gloss
-  \highlight{pasi}^ & PROG \\
-  \highlight{pasi} & walk \\
-  =∅ & 3SG.NOM \\
-  Kawam & Kawam \\
-  \tr As for \textit{walking}, Kawam is doing so.
-\end{example}
+\section{Dependent clauses}
+Dependent clauses are concatenated onto the main clause in most circumstances.
+\begin{examples}
+	\ex
+	\label{ex:boy_want_mom_cook}
+	\script sirin hea aw kohanin amha
+	\bits sir -in hea aw kohan -in amha
+	\gloss want AV boy OBL cook AV mother
+	\tr A boy wants his mother to cook.
+\end{examples}
+The clunkier way to clarify this is to rephrase the dependent clause into a gerund (\GER)\sidenote{do we even need the gerund? we can simply use the nominaliser, and for actor/patients of the verb stick on the word for person}, and use an instrumental converb.
+\begin{examples}
+	\ex
+	\label{ex:go_forest_to_see_river}
+	\script tsipasoong bohon pa hori sapsokyo
+	\bits tsi= paso -ong bohon pa hori sap- so =kyo
+	\gloss 1SG.NOM walk LV forest INST river GER see 3SG.POSS
+	\tr A forest is walked in by me with (intentions of) a seeing of a river.
+	\tr I walk in a forest to see a river.
+\end{examples}
 
-\section{Non-verbal clauses}
-Non-verbal clauses are clauses in which a declarative verb (intransitive or transitive)
-is not immediately apparent. This section illustrates how \langname{} handles such phrases.
+\section{Relative clauses}
+In relative clauses, we can again exploit the instrumental converb and the gerundive.\sidenote{maybe this template is getting a bit old... are there more varied ways we can do this?}
+\begin{examples}
+	\ex
+	\label{ex:father_who_cried}
+	\script ando pa sapsabow
+	\bits ando pa sap- sabow
+	\gloss father INST GER cry
+	\tr a father with crying (in mind)
+	\tr a crying father
+\end{examples}
 
-\subsection{Existential clauses}
-Existential clauses are clauses that, when translated to English, usually
-begin with `there exist(s)' or `there are'. For such clauses,
-\langname{} employs the intransitive verb \rom{semat} (`to stand') as an existential
-verb, as in \cref{ex:theres_a_dog_here,ex:two_sens}.
+This also works for relative clauses with ditransitive verbs.
+but the roles of the new nouns introduced must be marked too\sidenote{could cause confusion because relative clauses can function as whole clauses themselves---how do we make it less clunky?}.
+\begin{examples}
+	\ex
+	\label{ex:cat_who_bit_girl}
+	\script paddendain miw pa boyan sapingingkakkyo aw tsoetsoe \\
+	\bits pad- denda -in miw pa boyan sap- ingik -\underline{nak} =kyo aw tsoe^ tsoe \\
+	\gloss PFV catch AV cat INST girl GER bite PV 3SG.POSS OBL COL fish \\
+	\tr A cat caught fish with a girl's (experience of) being bitt\underline{en}.
+	\tr A cat---who bit a girl---caught fish.
+\end{examples}
 
-\begin{example}
-  \label{ex:theres_a_dog_here}
-  \gloss
-  pariw & dog \\
-  ʔita & one \\
-  kisak & CLF.small.animal \\
-  caʔi- & LOC \\
-  taŋamuy & here \\
-  \highlight{semat} & stand \\
-  =∅ & 3SG.NOM \\
-  \tr There is one dog here.
-\end{example}
-
-\begin{example}
-  \label{ex:two_sens}
-  \gloss
-  caʔi- & LOC \\
-  Paŋkur & Bangur \\
-  maruŋ & honorific.male \\
-  Sen & Sen \\
-  rawa & two \\
-  ʔacak & CLF.human \\
-  \highlight{semat} & stand \\
-  halwat & 3PL \\
-  ta- &  ACC \\
-  Rupisen & Sen.Robi \\
-  ni & and \\
-  ta- & ACC \\
-  Tiripsen & Sen.Dilip \\
-  ʔamuy & DEM.PROX \\
-  \lit In Bangur, two Mr Sen--s stand. They are that Robi Sen and that Dilip Sen.
-  \tr There are two Sen--s in Bangur, Robi Sen and Dilip Sen.
-  \source \textsc{5moyd} \#2021
-\end{example}
-
-\subsection{Locative clauses}
-Locative clauses, in which the subject is \textit{in} a certain location, the
-\acrfull{loc} is employed together with the `existential' verb \rom{semat} (`to stand'),
-as in \cref{ex:mother_is_at_the_forest}.
-
-\begin{example}
-  \label{ex:mother_is_at_the_forest}
-  \gloss
-  ʔamu & mother \\
-  caʔi- & LOC \\
-  tentu^ & COL \\
-  tentu & tree \\
-  semat & stand \\
-  =∅ & 3SG.NOM \\
-  \tr Mother is in a forest.
-\end{example}
-
-\subsection{Nominal clauses}
-Nominal clauses usually take the form `X is Y'. In \langname{}, this is indicated
-by juxtaposing the two nominals, placing the subject (the noun being likened)
-before the object (the noun being likened \textit{to}), since \langname{}
-lacks copulae. See \cref{ex:he_is_pamat,ex:that_is_your_chicken}.
-\begin{example}
-  \label{ex:he_is_pamat}
-  \gloss
-  mera & 3SG \\
-  ta- & ACC \\
-  pamat & Pamat \\
-  \tr He is Pamat.
-\end{example}
-
-\begin{example}
-  \label{ex:that_is_your_chicken}
-  \gloss
-  ʔaliŋ & DEM.DIST \\
-  ta- & ACC \\
-  ka= & 2SG.GEN \\
-  carik & chicken \\
-  \tr That's your chicken.
-\end{example}
-
-Adjectival clauses, where Y in the `X is Y' format is an adjective, are handled
-in the same manner. In this case, adjectives are treated as verbs, and thus
-take on pronoun clitics, as in \cref{ex:khayat_is_tall,ex:my_clothes_were_beautiful}.
-\begin{example}
-  \label{ex:khayat_is_tall}
-  \gloss
-  Hayat & Khayat \\
-  ŋela^ & PROG \\
-  ŋelahu & long \\
-  =∅ & 3SG.NOM \\
-  \tr Hayat is (still) tall.
-\end{example}
-
-\begin{example}
-  \label{ex:my_clothes_were_beautiful}
-  \gloss
-  se= & 1SG.GEN \\
-  ʔanu- & NMLZ.PARG \\
-  watis & wear \\
-  puŋ- & PST \\
-  culi^ & PROG \\
-  culi & beautiful \\
-  =wat & 3PL.NOM \\
-  \tr My clothes were beautiful.
-\end{example}
-
-\section{Modifiers}
-Modifiers are lexemes that supplement information to a base noun. This
-section quickly discusses the order in which they occur after a noun.
-
-\textbf{Adjectives} follow their attached noun, as in \cref{ex:white_dog}.
-\begin{example}
-  \label{ex:white_dog}
-  % \script pariw mipu
-  \gloss
-  pariw & dog \\
-  \highlight{purah} & white \\
-  \tr (a) white dog
-\end{example}
-
-Similarly, \textbf{numbers} that detail the quantity of a certain referent also follow
-it, as in \cref{ex:three_people}. In \cref{ex:six_books}, for instance,
-the \textbf{noun classifier} also follows its attached referent, following the number.
-
-\begin{example}
-  \label{ex:three_people}
-  % \script pariw ʔiker
-  \gloss
-  ʔacak & human \\
-  \highlight{tami} & three \\
-  \tr three people
-\end{example}
-
-\begin{example}
-  \label{ex:six_books}
-  \gloss
-  huʔam & book \\
-  halih & six \\
-  \highlight{pelay} & CLF.sheet \\
-  \tr six books
-\end{example}
-
-\textbf{\Acrfull{dem} nouns} also follow
-their referents. Observe \cref{ex:these_two_trees,ex:that_black_dog} which demonstrate each
-demonstrative noun combined with another modifier.
-
-\begin{example}
-  \label{ex:these_two_trees}
-  % \script ʔamuy pariw ʔiker
-  \gloss
-  tentu & tree \\
-  ŋelahu & long \\
-  rawa & two \\
-  waʔiŋ & CLF.tree \\
-  \highlight{ʔamuy} & DEM.PROX \\
-  \tr these two tall trees
-\end{example}
-
-\begin{example}
-  \label{ex:that_black_dog}
-  % \script ʔaliŋ pariw ʔaŋ wasuwasu
-  \gloss
-  pariw & dog \\
-  tuʔat & black \\
-  \highlight{ʔaliŋ} & DEM.DIST \\
-  \tr that/yonder black dog
-\end{example}
-
-Contrastingly, \textbf{relative clauses} delimited by the \acrfull{rel} precede
-their attached noun, as in \cref{ex:sleeping_dog}. More detail into relative
-clauses will appear in future chapters.
-\begin{example}
-  \label{ex:sleeping_dog}
-  \gloss
-  wasu^ & PROG \\
-  wasu & sleep \\
-  \highlight{ʔaŋ} & REL \\
-  \highlight{pariw} & dog \\
-  \tr a dog which is sleeping
-\end{example}
-
-The \textbf{possessor} of the noun, which is marked in the \gls{gen}, also precedes
-the noun. Since the `possessor' noun always takes on an additional case marker,
-the `possession' can easily be distinguished from it, as in \cref{ex:kings_boar}.
-\begin{example}
-  \label{ex:kings_boar}
-  \gloss
-  \highlight{tapiwaŋa} & king \\
-  ʔamuy & DEM.PROX \\
-  me= & 3SG.GEN \\
-  kataŋ & boar \\
-  \tr this king's boar
-\end{example}
-
-Where the `possessor' is a personal pronoun, the personal pronoun is cliticised as a prefix onto the `possession',
-as in \cref{ex:their_boar}.\sidenote{Case markers and pronoun clitics will be discussed in the following chapter!}
-\begin{example}
-  \label{ex:their_boar}
-  \gloss
-  \highlight{hal}= & 3PL.GEN \\
-  kataŋ & boar \\
-  mipu & red \\
-  \tr their red boar
-\end{example}
-
-Where more than one possession occurs (i.e.~the possessors are `nested'),
-each subsequent possessor is simply stacked before the previous one, as in
-\cref{ex:his_grandmothers_doctors_dog}.
-\begin{example}
-  \label{ex:his_grandmothers_doctors_dog}
-  \gloss
-  me= & 3SG.GEN \\
-  miwtiw & paternal.grandmother \\ % mawtaŋ - paternal.grandfather
-  me= & 3SG.GEN \\
-  ʔaca- & NMLZ.AARG \\ % agentive nominalizer
-  ŋurus & drug \\
-  me= & 3SG.GEN \\
-  pariw & dog \\
-  \tr his/her grandmother's doctor's dog
-\end{example}
-
-In short, nominal referents and their modifiers adopt the following general ordering.
-\begin{tightcenter}
-  relative clause -- possessor -- \textbf{referent} -- adjective -- number -- classifier -- demonstrative
-\end{tightcenter}
-
-\section{Adpositional phrases}
-Adpositional phrases in \langname{} fall into one of three
-`universal' categories: that of \textit{time}, \textit{manner} and \textit{place}.
-Generally, the time--place--manner ordering of adpositional phrases is adopted, as
-seen in \cref{ex:hayat_boil_millet}.
-\begin{example}
-  \label{ex:hayat_boil_millet}
-  \gloss
-  Hayat & Khayat \\
-  ta- & ACC \\
-  keʔiti & millet \\
-  \highlight{nicawat} & tomorrow \\
-  caʔi- & LOC \\
-  \highlight{rewtew} & hut \\
-  may- & INS \\
-  \highlight{sakep} & pot \\
-  kuŋi & boil \\
-  =∅ & 3SG.NOM \\
-  \tr Khayat will boil millet with a pot in a hut tomorrow.
-\end{example}
-
-Again, as with foci in a clause, these adpositional phrases may
-be subject to reordering within it. An adpositional phrase can too
-serve as the focus of a clause, as in the hypothetical \cref{ex:tomorrow_boil_millet}.
-
-\begin{example}
-  \label{ex:tomorrow_boil_millet}
-  \gloss
-  \highlight{nicawat} & tomorrow \\
-  Hayat & Khayat \\
-  ta- & ACC \\
-  keʔiti & millet \\
-  caʔi- & LOC \\
-  \highlight{rewtew} & hut \\
-  may- & INS \\
-  \highlight{sakep} & pot \\
-  kuŋi & boil \\
-  =∅ & 3SG.NOM \\
-  \tr \textit{Tomorrow}, Khayat will boil millet with a pot in a hut.
-\end{example}
+\begin{examples}
+	\ex
+	\label{ex:soldier_died}
+	\script padrohakin korsi pa saphedontak wang kin
+	\bits pad- rohak -in korsi pa sap- hedot -nak wang kin
+	\gloss PFV die AV soldier INST GER kill PV many person
+	\tr A soldier had died, with the killing of many people.
+	\tr A soldier---who killed many people---had died.
+\end{examples}
