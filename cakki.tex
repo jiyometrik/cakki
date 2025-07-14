@@ -1,12 +1,12 @@
 \PassOptionsToPackage{backend=biber,style=apa,sorting=ynt}{biblatex}
 \PassOptionsToPackage{en-US}{datetime2}
-\documentclass[11pt, a4paper, sidefootnotes, english]{pancake-book}
+\documentclass[11pt, a4paper, sidefootnotes, english]{squarecake-book}
 
 \input{infofiles/preamble}
 \addbibresource{bibliography.bib}
 
 % \input{abbreviations}
-\makeglossaries
+\makenoidxglossaries
 
 \begin{document}
 \title{A rough grammar of \langname}
@@ -16,6 +16,7 @@
 \frontmatter
 \maketitle
 \tableofcontents
+\printnoidxglossaries[style=mcolindex]
 
 \mainmatter
 \setcounter{chapter}{-1}
@@ -23,8 +24,7 @@
 \input{infofiles/phono}
 \input{infofiles/clauses}
 \input{infofiles/verbs}
+\input{infofiles/nouns}
 
-\backmatter
-\printglossary
 % \printglossaries
 \end{document}

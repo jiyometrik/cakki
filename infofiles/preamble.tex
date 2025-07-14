@@ -14,21 +14,6 @@
 \setmainfont{charis sil}
 \setsansfont{sora}
 
-%* TOC
-\usepackage{titletoc}
-\usepackage[titles]{tocloft}
-\renewcommand{\cftfigpresnum}{\scshape\MakeTextLowercase}%
-\renewcommand{\cftfigfont}{\normalfont}%
-\renewcommand{\cftfigleader}{\hspace{2.5em}}%
-\renewcommand{\cftfigafterpnum}{\cftparfillskip}%
-\renewcommand{\cftfigpresnum}{\figurename~}%Fig.~}
-\newlength{\figurelabelwidth}
-\settowidth{\figurelabelwidth}{\cftfigpresnum~999}
-\addtolength{\figurelabelwidth}{1em}
-\cftsetindents{figure}{0em}{\figurelabelwidth}
-\renewcommand\cftchapleader{\qquad}
-\renewcommand\cftsecleader{\qquad}
-\renewcommand\cftsubsecleader{\qquad}
 
 %* Glossary
 \renewcommand*{\glsnamefont}[1]{#1}
@@ -38,6 +23,7 @@
 \definecolor{green}{HTML}{7f9172}
 \definecolor{parch}{HTML}{fbf7f2}
 \definecolor{steel}{HTML}{7d84b2}
+\pagecolor{parch}
 
 \newcommand{\nativeparen}[1]{{\kern-6pt（#1）\kern-6pt}}
 \newcommand{\detail}[1]{\textcolor{green}{\textit{#1}}}
@@ -56,5 +42,5 @@
 % \updatebaarustyle{columns}{}{\addbaaruhook{everygloss}{\baarucolwidth{1}{3.25cm}}}
 % \newenvironment{multiexample}[1][]{\example\textbf{#1}\examples}{\endexamples\endexample}
 
-\input{abbreviations}
-\pagecolor{parch}
+\loadglsentries{abbreviations.tex}
+% \input{abbreviations}

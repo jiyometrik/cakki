@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{pancake-book}[2021/09/09 Annotated book class]
+\ProvidesClass{squarecake-book}[14/07/2025 Pancake's annotated book class, by Pancake, modified by Jiyo]
 
 %* Footnotes to sidenotes
 \DeclareOption{sidefootnotes}{
@@ -98,7 +98,7 @@
 
 \RequirePackage{datetime2}
 
-\RequirePackage{pancake-ling}
+\RequirePackage{squarecake-ling}
 % commented out for now, i want to try it later
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{cleveref}
