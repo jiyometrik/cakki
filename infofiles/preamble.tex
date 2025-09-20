@@ -1,4 +1,6 @@
 \usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{amsmath, relsize}
 
 %? Date handling
 \DTMsavedate{startdate}{2024-11-18}
@@ -12,35 +14,36 @@
 
 %* Font
 \setmainfont{charis sil}
-\setsansfont{sora}
+\setmathfont{libertinus math}
+\setsansfont{fira sans}
 
 
 %* Glossary
 \renewcommand*{\glsnamefont}[1]{#1}
 
 %? Text formatting
-\definecolor{pink}{HTML}{ae76a6}
-\definecolor{green}{HTML}{7f9172}
+\definecolor{pink}{HTML}{DB4E6E}
+\definecolor{green}{HTML}{60A861}
 \definecolor{parch}{HTML}{fbf7f2}
-\definecolor{steel}{HTML}{7d84b2}
-\pagecolor{parch}
+\definecolor{steel}{HTML}{2B6F94}
 
 \newcommand{\nativeparen}[1]{{\kern-6pt（#1）\kern-6pt}}
 \newcommand{\detail}[1]{\textcolor{green}{\textit{#1}}}
 
 \newenvironment{tightcenter}{\setlength{\topsep}{0pt}\setlength{\parskip}{0pt}\vspace{1em}
-  \begin{center}}{
-  \end{center}}
+	\begin{center}}{
+	\end{center}}
 
 %? Shortcuts
-\newcommand{\langname}{\rom{Tsakia}}
+\newcommand{\langname}{\rom{Ipcal}}
 \newcommand{\allo}{\textasciitilde}
 
 %? Baarux stuff
 %* Set up new line types
-% \newbaarucolstyle*{mutations}{\rom ,\textrightarrow\hspace{\baaruuse{cellspacing}}\rom , \trans}
-% \updatebaarustyle{columns}{}{\addbaaruhook{everygloss}{\baarucolwidth{1}{3.25cm}}}
-% \newenvironment{multiexample}[1][]{\example\textbf{#1}\examples}{\endexamples\endexample}
+\newbaarucolstyle*{mutations}{\native ,\textrightarrow\hspace{\baaruuse{cellspacing}}\rom , \trans}
+\updatebaarustyle{columns}{}{\addbaaruhook{everygloss}{\baarucolwidth{1}{3.25cm}}}
+\newenvironment{multiexample}[1][]{\example\textbf{#1}\examples}{\endexamples\endexample}
 
 \loadglsentries{abbreviations.tex}
 % \input{abbreviations}
+\pagecolor{parch}

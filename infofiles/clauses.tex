@@ -1,151 +1,248 @@
 \chapter{Clauses}
 \label{ch:clauses}
 This chapter discusses the basic clause structures of \langname{}.
-
-\section{Syntax}
-\langname{} features \detail{symmetrical voice}, where the role of the primary argument
+It features \detail{symmetrical voice}, where the role of the primary argument
 (or the argument \detail{in focus}) is encoded onto the verb itself. There are four voices in
 \langname{}: \detail{actor voice} (\AV), \detail{patient voice} (\PV), \detail{locative voice} (\LV)
 and \detail{instrumental voice} (\IV).
+
+\section{Transitivity}
+With \detail{transitive verbs}, all arguments are expressly marked with role markers.
+The \detail{focus} --- the argument marked by the verb's voice --- receives the optional focus marker
+\FOC~instead.
 \begin{examples}
 	\ex
 	\label{ex:actor_voice}
-	\script ngain yeo aw amospe \\
-	\bits nga -in yeo aw amospe \\
-	\gloss eat AV child OBL crab \\
+	\script ngain wan yeo ri mosea \\
+	\bits nga -in wan yeo ri mosea \\
+	\gloss eat AV FOC child ACC crab \\
 	\tr A child eats crab.
 \end{examples}
 
 \begin{examples}
 	\ex
 	\label{ex:patient_voice}
-	\script nganak amospe ya yeo \\
-	\bits nga -nak amospe ya yeo \\
-	\gloss eat PV crab GEN child \\
+	\script nganak ce yeo wan mosea \\
+	\bits nga -nak ce yeo wan mosea \\
+	\gloss eat PV NOM child FOC crab \\
 	\tr Crab is eaten by the child.
 \end{examples}
 
 \begin{examples}
 	\ex
 	\label{ex:locative_voice}
-	\script ngaong sekio aw amospe ya yeo \\
-	\bits nga -ong sekio aw amospe ya yeo \\
-	\gloss eat LV hut OBL crab GEN child \\
+	\script ngaong ce yeo ri mosea wan sikaw \\
+	\bits nga -ong ce yeo ri mosea wan sikaw \\
+	\gloss eat LV NOM child ACC crab FOC hut \\
 	\tr A hut is eaten crab in by a child.
 \end{examples}
 
 \begin{examples}
 	\ex
 	\label{ex:instrumental_voice}
-	\script ngapaw yeo roakyo amospe \\
-	\bits nga -paw yeo roa =kyo aw amospe \\
-	\gloss eat IV child hand 3SG.POSS OBL crab \\
+	\script ngapay ri mosea ong sikaw ce yeo wan keroa \\
+	\bits nga -pay ri mosea ong sikaw ce yeo wan ke= roa \\
+	\gloss eat IV ACC crab LOC hut NOM child FOC 3SG.POS hand \\
 	\tr A hut is eaten crab in by a child.
 \end{examples}
 
-For transitive clauses, \langname{} adopts a verb-initial word order.
-This is true for monovalent (or \detail{intransitive}) verbs too, where \AV~is the default.
+\section{Intransitivity}
+\detail{Intransitive verbs} don't require a voice, since they only take one argument.
 \begin{examples}
 	\ex
 	\label{ex:the_child_dies}
-	\script rohakin yeo
-	\bits rohak =in yeo
-	\gloss die AV child
+	\script rohak wan yeo \\
+	\bits rohak wan yeo \\
+	\gloss die FOC child \\
 	\tr A child dies.
 \end{examples}
 
-Verbs that take no arguments (i.e. have \detail{zero valency}) are left alone, without a voice.
 \begin{examples}
 	\ex
-	\label{ex:its_raining}
-	\script rea poipoi
-	\bits rea poi^ poi
-	\gloss now PROG rain
-	\tr It's raining now.
+	\label{ex:dead_child}
+	\script porohak wan yeo \\
+	\bits po- rohak wan yeo \\
+	\gloss PFV die FOC child \\
+	\tr A child is dead.
+	\tr There is a dead child.
+\end{examples}
+
+This includes \detail{stative verbs} that describe a state of being.
+\begin{examples}
+	\ex
+	\label{ex:akoe_beautiful}
+	\script ngebande eno i Akoe  \\
+	\bits nge- bande eno i Akoe  \\
+	\gloss NPFV to.be.beautiful DEM.MED LNK PN \\
+	\tr That Akoe is beautiful.
 \end{examples}
 
 \section{Nominal clauses}
-\langname~lacks a copula. This is easily rectified by a verbalizer conveying the meaning of `to be'---\rom{ko-} (from \rom{koay} `to live').
+\langname~lacks a copula; instead two nouns equating each other are placed side by side.
 \begin{examples}
 	\ex
 	\label{ex:you_bitch}
-	\script koyebao
-	\bits ko- yeba =ao
-	\gloss VBZ.be dog 2SG.NOM
+	\script yebano \\
+	\bits yeba =no \\
+	\gloss dog 2SG.NOM \\
 	\tr You're a dog.
 \end{examples}
-
-Similarly, \langname~lacks a distinct verb for `to have'---\rom{ma-} (from \rom{maya} `to carry').
 \begin{examples}
 	\ex
-	\label{ex:you_have_a_dog}
-	\script mayebao
-	\bits ma- yeba =ao
-	\gloss VBZ.have dog 2SG.NOM
-	\tr You have a dog.
-\end{examples}
-
-\section{Dependent clauses}
-Dependent clauses are concatenated onto the main clause in most circumstances.
-\begin{examples}
-	\ex
-	\label{ex:boy_want_mom_cook}
-	\script sirin hea aw kohanin amha
-	\bits sir -in hea aw kohan -in amha
-	\gloss want AV boy OBL cook AV mother
-	\tr A boy wants his mother to cook.
-\end{examples}
-\begin{examples}
-	\ex
-	\label{ex:he_started_beating_the_pig}
-	\script haskiin kew aw dasohin bao
-	\bits haski -in kew aw dasoh -in bao
-	\gloss start AV 3SG.NOM OBL beat AV pig
-	\tr He starts to beat the pig.
-\end{examples}
-The clunkier way to clarify this is to \detail{nominalize} the dependent clause,
-with \INST~serving as a converb. No voice is assigned to dependent monotransitive verbs.
-\begin{examples}
-	\ex
-	\label{ex:go_forest_to_see_river}
-	\script tsipasoong bohon pa hori-aresokyo
-	\bits tsi= paso -ong bohon pa hori are- so =kyo
-	\gloss 1SG.NOM walk LV forest INST river NMZ see 3SG.POSS
-	\tr A forest is walked in by me with (intentions of) a seeing of a river.
-	\tr I walk in a forest to see a river.
+	\label{ex:my_sister}
+	\script Irade wan cisaono \\
+	\bits Irade wan ci= saono  \\
+	\gloss PN FOC 1SG.POS sister \\
+	\tr Irade is my sister.
 \end{examples}
 
 \section{Relative clauses}
+\subsection{Monotransitives}
 The actor in a relative clause is often the same as in its surrounding independent clause.
-\LOC~is used to mark the actor's state of being for \detail{stative verbs}.
+\langname~uses the linker \LNK~to indicate this.
 \begin{examples}
 	\ex
 	\label{ex:father_who_cried}
-	\script ando ong aresabow
-	\bits ando ong are- sabow
-	\gloss father LOC NMZ cry
-	\tr a father in (the act of) crying
+	\script sabowin i ando \\
+	\bits sabow -in i ando \\
+	\gloss cry AV LNK father \\
 	\tr a crying father
 \end{examples}
+For monotransitive verbs it is useful to use \LOC~with \NMZ~too!
+\begin{examples}
+	\ex
+	\label{ex:father_at_cried}
+	\script doyatin ong aresabow wan ando \\
+	\bits doyat -in ong are- sabow wan ando \\
+	\gloss to.be.ill AV LOC NMZ cry FOC father \\
+	\tr Ill is a father in (the process of) crying.
+	\tr A crying father is ill.
+\end{examples}
 
-The combo of \INST~and \NMZ~also works for relative clauses with ditransitive verbs.
-but the roles of the new nouns introduced must be marked too.
+\subsection{Ditransitives}
+The relative clause is squeezed in with the same role marker (\FOC, \NOM, and others)
+as the argument it attaches to.
+\begin{examples}
+	\ex
+	\label{ex:cat_bit_girl}
+	\script podendain ri coecoe wan ea miw wan ingingkak boyan
+	\bits po- denda -in ri coe^ coe wan ea miw wan ingik -nak boyan
+	\gloss PFV catch AV ACC COL fish FOC DEM.PROX cat FOC bite PV girl
+	\tr This cat who bit a girl caught fish.
+\end{examples}
+Alternatively, the combo of \INST~and \NMZ~also works, although this is a fair bit clunkier.
 \begin{examples}
 	\ex
 	\label{ex:cat_who_bit_girl}
-	\script podendain miw pa boyan-areingingkakyo aw tsoetsoe \\
-	\bits po- denda -in miw pa boyan are- ingik -nak =kyo aw tsoe^ tsoe \\
-	\gloss PFV catch AV cat INST girl NMZ bite PV 3SG.POSS OBL COL fish \\
+	\script podendain ea miw pa keareingingkak boyan ri coecoe \\
+	\bits po- denda -in ea miw pa ke= are- ingik -nak boyan ri coe^ coe \\
+	\gloss PFV catch AV DEM.PROX cat INST 3SG.POS NMZ bite PV girl ACC COL fish \\
 	\tr A cat caught fish with a girl's (act of) being bitten.
 	\tr A cat---who bit a girl---caught fish.
 \end{examples}
 
+\section{Negation}
+\rom{Negatives} for verbal clauses are always formed using \rom{ihe}.
 \begin{examples}
 	\ex
-	\label{ex:soldier_died}
-	\script porohakin korsi pa arehedontak mae saeng
-	\bits po- rohak -in korsi pa are- hedot -nak mae saeng
-	\gloss PFV die AV soldier INST NMZ kill PV many person
-	\tr A soldier had died, with the killing of many people.
-	\tr A soldier---who killed many people---had died.
+	\label{ex:dont_eat_meat}
+	\script ihe cinganak obaw \\
+	\bits ihe ci= nga -nak obaw \\
+	\gloss NEG 1SG.NOM eat PV flesh \\
+	\tr I don't eat meat.
 \end{examples}
+
+\section{Imperatives}
+\detail{Imperatives} are formed using the irrealis mood. Since the
+actor is always implied, verbs in the imperative take \PV.
+\begin{examples}
+	\ex
+	\label{ex:go_kill_goat}
+	\script daehoak eno i wewin!
+	\bits dae- hoak -nak eno i wewin
+	\gloss IRR kill PV DEM.MED LNK goat
+	\tr Kill that goat!
+\end{examples}
+
+\detail{Prohibitives} are formed with another particle, \rom{isop}.
+\begin{examples}
+	\ex
+	\label{ex:dont_feed_that_child}
+	\script isop daerahnganak yake i yeo
+	\bits isop dae- rah- nga -nak yake i yeo
+	\gloss NEG.IMP IRR CAUS eat PV DEM.DIST LNK child
+	\tr Don't feed that child!
+\end{examples}
+
+% \section{Conditionals}
+% The irrealis is also used to form \detail{conditionals}, statements in the hypothetical.
+% Here, the dependent clauses don't take a voice---the main `resultative' clause does.
+% \begin{examples}
+% 	\ex
+% 	\label{ex:pig_kills_me}
+% 	\script mate cidasoh ea bao dain daakin ea aw cio
+% 	\bits mate ci= dasoh ea bao dain dae- hoak -in ea aw cio
+% 	\gloss if 1SG.NOM beat DEM.PROX pig later IRR kill AV DEM.PROX OBL 1SG
+% 	\tr If I beat this pig, it'd kill me.
+% \end{examples}
+
+% \section{Questions}
+% \detail{Yes/no questions} are formed by the interrogative mood.
+% \begin{examples}
+% 	\ex
+% 	\label{ex:did_you_defecate_on_the_floor}
+% 	\script we ponaengkinak maka ong bosin?
+% 	\bits we po- na= engki -nak maka ong bosin
+% 	\gloss INT PFV 2SG.NOM give PV shit LOC floor
+% 	\tr Did you shit on the floor?
+% \end{examples}
+
+% \detail{{\scshape{Wh}}--questions} are formed by replacing the agent being asked
+% about by a pronoun, with the corresponding voice on the verb.
+
+% \begin{examples}
+% 	\ex
+% 	\label{ex:what_is_on_the_floor}
+% 	\script masaikyo ya bosin?
+% 	\bits ma- sai =kyo ya bosin
+% 	\gloss VBZ.have what 3SG.POS POS floor
+% 	\tr What does the floor have?
+% 	\tr What's on the floor?
+% \end{examples}
+
+% \begin{examples}
+% 	\ex
+% 	\label{ex:what_time}
+% 	\script ponaengkiong sodeng aw maka ri bosin?
+% 	\bits po- na= engki -ong sodeng aw maka ri bosin
+% 	\gloss PFV 2SG.NOM give LV when OBL shit LOC floor
+% 	\tr When did you shit on the floor?
+% \end{examples}
+
+% \begin{examples}
+% 	\ex
+% 	\label{ex:with_shit}
+% 	\script ponaengkipaw sai aw maka ong bosin?
+% 	\bits po- na= engki -paw sai aw maka ong bosin
+% 	\gloss PFV 2SG.NOM give IV what OBL shit LOC floor
+% 	\tr For/with what did you shit on the floor?
+% 	\tr Why/how did you shit on the floor?
+% \end{examples}
+
+% \begin{examples}
+% 	\ex
+% 	\label{ex:where_shit_you}
+% 	\script ponaengkiong sian aw maka?
+% 	\bits po- na= engki -ong sian aw maka
+% 	\gloss PFV 2SG.NOM give LV where OBL shit
+% 	\tr On where did you shit?
+% \end{examples}
+
+% \begin{examples}
+% 	\ex
+% 	\label{ex:who_shit}
+% 	\script poengkiin soe aw maka ong bosin?
+% 	\bits po- engki -in soe aw maka ong bosin
+% 	\gloss PFV give AV who OBL shit LOC floor
+% 	\tr Who shit on the floor?
+% \end{examples}

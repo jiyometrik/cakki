@@ -1,3 +1,4 @@
+% REWRIITNG
 \chapter{Nouns}
 \label{ch:nouns}
 
@@ -5,44 +6,61 @@
 Nouns which become the \detail{focus} of the verb they are linked to do
 not receive a case marking. The remaining arguments come with particles that indicate their role.
 
-The \detail{oblique} and \detail{non-oblique case} mark the direct and indirect object
+The \detail{oblique} and \detail{indirect oblique} mark the direct and indirect object
 of a mono-/ditransitive verb. The \detail{genitive} marks the agent in a clause whose
-verb is non-\AV. Just like their respective verb voices, the \detail{instrumental} and \detail{locative} mark the notions of `with'
-and `at' respectively.
+verb is non-\AV.
 \begin{table}[htpb]
 	\begin{tabular}{r l}
 		\toprule
-		\OBL  & \rom{aw}  \\
-		\NOBL & \rom{ri}  \\
-		\GEN  & \rom{ya}  \\
+		\DIR  & \rom{wan} \\
+		\OBL  & \rom{ri}  \\
+		\NOBL & \rom{ka}  \\
 		\LOC  & \rom{ong} \\
-		\INST & \rom{pa}  \\
 		\bottomrule
 	\end{tabular}
 	\caption{Noun case markers}
 	\label{tab:cases}
 \end{table}
 
+In clauses involving verbs---as in \cref{ch:verbs}---the case markers attached
+to nouns vary with the \detail{voice} of the verb.
+\begin{table}[htpb]
+	\begin{tabular}{r c c c c}
+		\toprule
+		voice & agent & direct patient & indirect patient & location \\
+		\midrule
+		\AV   & \DIR  & \OBL           & \NOBL            & \LOC     \\
+		\PV   & \OBL  & \DIR           & \NOBL            & \LOC     \\
+		\LV   & \OBL  & \OBL           & \NOBL            & \DIR     \\
+		\IV   & \OBL  & \OBL           & \DIR             & \LOC     \\
+		\bottomrule
+	\end{tabular}
+	\caption{Case-marking patterns in verb voices}
+	\label{tab:voicepatterns}
+\end{table}
+
 \section{Number}
-\langname~does not explicitly mark for number. Full reduplication expresses
-the \detail{collective noun} \COL, or the idea of the noun as opposed to an instance of it.
+\langname~does not explicitly mark for number.
+\begin{itemize}
+	\item CV reduplication indicates the \detail{associative} (`...and such').
+	\item Full reduplication indicates the \detail{collective} number.
+\end{itemize}
 
 \section{Pronouns}
-\langname~has a nice set of personal pronouns. When not the actor in a verb,
-their full versions are used. When they act as the possessor of another noun, they
-cliticise onto the possessee.
+\langname~has a nice set of personal pronouns. When used as an \rom{argument} in a clause, they cliticise to the ends of case markers.
+When they act as the \rom{possessor} of another noun, they cliticise to the start the possessee.
 \begin{table}[htpb]
-	\begin{tabular}{r l l}
+	\begin{tabular}{r l l l}
 		\toprule
-		                & full          & \POSS        \\
+		             & full         & argument    & \POS       \\
 		\midrule
-		\FIRST\SG       & \rom{tsio}    & \rom{-o}     \\
-		\FIRST\PL.\INCL & \rom{tsaen}   & \rom{-yen}   \\
-		\FIRST\PL.\EXCL & \rom{tsoyang} & \rom{-yang}  \\
-		\SECOND\SG      & \rom{nao}     & \rom{-ao}    \\
-		\SECOND\PL      & \rom{naen}    & \rom{-(a)en} \\
-		\THIRD\SG       & \rom{kew}     & \rom{-kyo}   \\
-		\THIRD\PL       & \rom{kawang}  & \rom{-kwang} \\
+		\FIRST\S     & \rom{cio}    & \rom{-yo}   & \rom{ci-}  \\
+		\FIRST\P.\IN & \rom{caen}   & \rom{-yen}  & \rom{cay-} \\
+		\FIRST\P.\EX & \rom{cosang} & \rom{-yang} & \rom{co-}  \\
+		\SECOND\S    & \rom{nao}    & \rom{-no}   & \rom{na-}  \\
+		\SECOND\P    & \rom{naen}   & \rom{-nen}  & \rom{ney-} \\
+		\THIRD\S     & \rom{kew}    & \rom{-ew}   & \rom{ke-}  \\
+		\THIRD\P     & \rom{kawang} & \rom{-ang}  & \rom{kaw-} \\
 		\bottomrule
 	\end{tabular}
 	\caption{Personal pronouns}
@@ -52,56 +70,159 @@ cliticise onto the possessee.
 The possessor pronoun clitics can be compounded.
 \begin{examples}
 	\ex
-	\label{ex:my_dads_dogs_food}
-	\script andoo yebakyo arenganakyo
-	\bits ando =o yeba =kyo are- nga -nak =kyo
-	\gloss father 1SG.POSS dog 3SG.POSS NMZ eat PV 3SG.POSS
-	\tr my father's dog's food
+	\label{ex:my_dads_dogs_ball}
+	\script ciando keyeba kepoa
+	\bits ci= ando ke= yeba ke= poa
+	\gloss 1S.POS father 3S.POS dog 3S.POS ball
+	\tr my father's dog's ball
+\end{examples}
+
+For \detail{inalienably possessed} nouns (e.g. kin, body parts), the
+pronominal possessor clitic isn't necessary.
+\begin{examples}
+	\ex
+	\label{ex:my_dads_dogs_nose}
+	\script ciando keyeba iwco
+	\bits ci= ando ke= yeba iwco
+	\gloss 1S.POS father 3S.POS dog nose
+	\tr my father's dog's nose
 \end{examples}
 
 \langname~also has a handy set of optional \detail{demonstratives} that don't conjugate for number.
-They indicate definiteness.
+They indicate nouns---they can be used as standalone pronouns or together with the linker (\LK) \rom{i} for definiteness.
 \begin{table}[htpb]
 	\begin{tabular}{r l}
 		\toprule
-		\DEM.\PROX & \rom{ea}   \\
-		\DEM.\MED  & \rom{eho}  \\
-		\DEM.\DIST & \rom{ekya} \\
+		\PRX & \rom{ea}   \\
+		\MED & \rom{eno}  \\
+		\DST & \rom{yake} \\
 		\bottomrule
 	\end{tabular}
 	\caption{Demonstratives}
 	\label{tab:demonstratives}
 \end{table}
 
+\section{Noun phrases}
+Noun phrases are predominantly \detail{head-final} --- the \detail{head noun}
+of a noun phrase comes last. Each constituent is linked with \LK, or the same voice
+marker used to mark the head noun.
+
+To equate two nouns, they are juxtaposed.
+\begin{example}
+	\label{ex:woman_teacher}
+	\script haha ea i pecim \\
+	\bits haha ea i pecim \\
+	\gloss woman PRX LK teacher \\
+	\tr The teacher is a woman.
+\end{example}
+And to indicate the locative, the two nouns are also juxtaposed.
+\begin{example}
+	\label{ex:not_at_home}
+	\script ihe ong sikaw yake i hea \\
+	\bits ihe ong sikaw yake i hea \\
+	\gloss NEG LOC hut DST LK boy \\
+	\tr The boy isn't in the hut.
+\end{example}
+As mentioned in \cref{ch:verbs}, adjectives function like verbs---they take a voice
+marker.
 \begin{examples}
 	\ex
 	\label{ex:spoilt_cheese}
-	\script paonayoin ea adoyen
-	\bits po- nayo -in ea adow =yen
-	\gloss PFV spoil AV DEM.PROX cheese 1PL.INCL.POSS
-	\tr This cheese (which is ours) has spoiled.
+	\script ponayo porakso cayadowadow \\
+	\bits po- nayo po- rakso cay= adow^ adow \\
+	\gloss PFV be.bad PFV be.sour 1P.IN.POS COL cheese \\
+	\tr All our cheese has spoilt and soured.
+
+	\ex
+	\label{ex:brain_rot}
+	\script pokeaknak wan napido \\
+	\bits po- keak -nak wan na= pido \\
+	\gloss PFV rot PV DIR 2S.POS head \\
+	\tr Your brain is rotten.
 \end{examples}
 
-\section{Verbal derivations}
-Verbs with voice markings can be derived into nouns whose roles are
-in some way related to the original verb's meaning. \INST~is not as productive
-here.
+\section{Subordinate clauses}
+\detail{Subordinate clauses} are linked to their \detail{head noun} via \LK~too.
+For subordinate clauses that denote an equality (to another noun), a description (with a stative verb), or a location, this is easy enough.
 \begin{examples}
 	\ex
-	\label{ex:eat_food}
-	\script ngain arengain aw arenganak
-	\bits nga -in are- nga -in aw are- nga -nak
-	\gloss eat AV NMZ eat AV OBL NMZ eat PV
-	\tr An eater eats the eaten.
-	\tr Someone eats food.
+	\label{ex:can_beat}
+	\script angoy nginepnak rino wan yani i hea \\
+	\bits angoy nginep -nak ri =no wan yani i hea \\
+	\gloss POT be.above PV OBL 2S DIR be.weak LK boy \\
+	\tr You could defeat the weak boy.
+
+	\ex
+	\label{ex:dont_beat_kaba}
+	\script isop dasohnak wan Kaba i ea i ciyeba \\
+	\bits isop dasoh -nak wan Kaba i ea i ci= yeba \\
+	\gloss PRH beat PV DIR PN LK PRX LK 1S.POS dog \\
+	\tr Don't beat Kaba, my dog!
+
+	\ex
+	\label{ex:from_bayma}
+	\script yosroin ri kekorikori wan hay Bayma i omano \\
+	\bits yosro -in ri ke= kori^ kori wan hay Bayma i omano \\
+	\gloss rule AV OBL 3S.POS COL soldier DIR from PN LK chief \\
+	\tr The chief from Baima ruled his army.
+\end{examples}
+More complex subordinate clauses are formed the same way.
+\begin{examples}
+	\ex
+	\label{ex:there_is_his_friend}
+	\script eno ngesinepin riew i mik \\
+	\bits eno nginep <es> -in ri =ew i mik \\
+	\gloss MED be.above IRR AV OBL 3S LK friend \\
+	\tr There's the friend who'd lift him up.
+
+	\ex
+	\label{ex:there_is_his_friends}
+	\script eno ngesinepnak riew i mik \\
+	\bits eno nginep <es> -nak ri =ew i mik \\
+	\gloss MED be.above IRR PV OBL 3S LK friend \\
+	\tr There's the friend he'll lift up.
 \end{examples}
 
+\section{Classifiers}
+When counting nouns, \detail{classifiers} are used to establish the type of noun.
+There are classifiers for counting individual nouns---in particular, \CL.gust is used for counting events too.
+\begin{table}[htpb]
+	\begin{tabular}{r l}
+		\toprule
+		\CL.human  & \rom{cay}  \\
+		\CL.mammal & \rom{kiw}  \\
+		\CL.fish   & \rom{pok}  \\
+		\CL.house  & \rom{inte} \\
+		\CL.heavy  & \rom{pang} \\
+		\CL.disc   & \rom{tie}  \\
+		\CL.stick  & \rom{meo}  \\
+		\CL.slice  & \rom{coah} \\
+		\CL.pill   & \rom{ibo}  \\
+		\CL.gust   & \rom{wara} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Demonstratives (individual)}
+	\label{tab:demonstratives_ind}
+\end{table}
 \begin{examples}
 	\ex
-	\label{ex:learn_school}
-	\script tsidoraong aredoraong aw aredoranak
-	\bits tsi= dora -ong are- dora -ong aw are- dora -nak
-	\gloss 1SG.NOM learn LV NMZ learn LV OBL NMZ learn PV
-	\tr A learning-place is learnt learnings in by me.
-	\tr I study lessons at school.
+	\label{ex:coughed_once}
+	\script hiwara pokohko yo \\
+	\bits hi= wara po- kohko ∅ =yo \\
+	\gloss one CL.gust PFV cough DIR 1S \\
+	\tr I coughed one time.
+
+	\ex
+	\label{ex:three_eggs}
+	\script beyranak wan meybo i boi \\
+	\bits beyra -nak wan mey= bo i boi \\
+	\gloss buy PV DIR three CL.pill LK egg \\
+	\tr Three eggs are sold.
 \end{examples}
+% kayam/kay- - 0
+% hia/hi- - 1
+% bane/ba- - 2
+% meyo/mey- - 3
+% deyte/dey- - 4
+% sitap/si- - 5
+% roa/ro- - 6

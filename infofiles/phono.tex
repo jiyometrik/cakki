@@ -1,84 +1,217 @@
 \chapter{Phonology}
 \label{cha:phonology}
-Rather self-explanatory chapter title, don't you think?
 
+Rather self-explanatory chapter title, don't you think?
+This chapter describes \langname's \detail{phonology}.
 
 \section{Consonants}
+\label{sec:consonants}
 
-\langname{} has a medium-sized set of consonants---\cref{tab:consonants}.
-
-\begin{table}[htbp]
-  \begin{tabular}{r c c c c}
-    \toprule
-                & {labial} & {alveolar}       & {palatal}      & {velar}         \\
-    \midrule
-    {nasal}     & m        & n                &                & ŋ \orthtext{ng} \\
-    {plosive}   & p\;b     & t\;d             &                & k               \\
-    {affricate} &          & t͡s \orthtext{ts} &                &                 \\
-    {fricative} &          & s                &                & x \orthtext{h}  \\
-    {liquid}    &          & ɾ \orthtext{r}   & j \orthtext{y} & w               \\
-    \bottomrule
-  \end{tabular}
-  \caption{Consonant inventory}
-  \label{tab:consonants}
+\langname~has a modestly-sized consonant inventory---\cref{tab:consonants}. Each column
+shows the \detail{lenition pattern} of each broad place of articulation---see \cref{sec:lenition}.
+\begin{table}[htpb]
+	\centering
+	\begin{tabular}{@{}rccccc@{}}
+		\toprule
+		                       & labial & alveolar & sibilant & palatal & dorsal \\
+		\midrule
+		nasal                  & m      & n        &          & ɲ       & ŋ      \\
+		plosive \textit{tense} & pː     & tː       & sː       & cː      & kː     \\
+		plosive \textit{plain} & p      & t        &          & c       & k      \\
+		fricative              &        & ɬ        & s        & ɕ       & h      \\
+		liquid                 & ʋ      & l        & r\allo z & j       &        \\
+		\bottomrule
+	\end{tabular}
+	\caption{Consonant inventory}
+	\label{tab:consonants}
 \end{table}
 
-The intervocalic sequences \phomtext{t.s t͡s} and \phomtext{t͡sː t.t͡s} have no minimal pairs.
+\begin{itemize}
+	\item \phomtext{m pː p} are bilabial % though m is often realised as ~w
+	\item \phomtext{ʋ} is labiodental
+	\item \phomtext{n tː t ɬ l} are dental; \phomtext{sː s} are apico-alveolar
+	\item \phomtext{ɲ cː c ɕ} are alveolo-palatal; \phomtext{j} is true palatal
+	\item \phomtext{ŋ kː k} are velar, though \phomtext{ŋ} is often realised as \phontext{ɰ̃}
+	\item \phomtext{h} can be realised as any voiceless `back' fricative (velar, uvular, pharyngeal, glottal)
+	\item standalone \phomtext{r} is often fricated: alveolar \phontext{z} or palato-alveolar \phontext{r̝}; in consonant clusters it is \phontext{ɾ}
+\end{itemize}
 
-The velar nasal \phomtext{ŋ} is able to nasalise the preceeding vowel syllable-finally, e.g. \phomtext{oŋ} becomes \phontext{õ\allo õɰ̃\allo õŋ}.
-The voiced plosives \phomtext{b d} are softened \phontext{v ɾ} intervocalically and fortified \phontext{p t} syllable-finally.
-The velar fricative \phomtext{x} can also be realised \phontext{ɰ\allo h\allo ɦ}.
+\subsection{On \phomtext{s sː}}
+The true fricatives \phomtext{s sː} are analysed as `plosives' in \cref{tab:consonants},
+as they were merged with with older \phomtext{ts tːs}. Previously, the sibilant affricates also complied with
+the lenition pattern in \cref{sec:lenition} to form \phontext{s}, but they lenited themselves to \phomtext{s sː}.
+
+\subsection{Consonant taxonomy}
+The `tense' plosives \phomtext{pː tː sː cː kː} are realised as long consonant
+geminates word-medially and word-finally, and as tenuis \phontext{p͈ t͈ s͈ c͈ k͈} word-initially.
+
+Voiceless obstruents can become voiced after voiced segments (including vowels). In particular,
+the plain plosives \phomtext{p t s c k} are prone to becoming prenasalised \phontext{ᵐb ⁿd ⁿs ᶮɟ ᵑɡ},
+especially after nasal vowels.
 
 \section{Vowels}
+\label{sec:vowels}
 
-\langname{} also has a relatively small inventory of monophthongs---\cref{tab:vowels}.
+\langname~has comparatively few vowels---\cref{fig:vowels}.
 
-\begin{table}[htbp]
-  \begin{tabular}{r c c}
-    \toprule
-         & front & non-front \\
-    \midrule
-    high & i     & o         \\
-    low  & e     & a         \\
-    \bottomrule
-  \end{tabular}
-  \caption{Vowel inventory}
-  \label{tab:vowels}
-\end{table}
+\begin{figure}
+	\centering
+	\begin{vowel}
+		\vpoint{0}{3}{i}
+		\vpoint{0.25}{2.5}{ĩ}
+		\vpoint{1}{2.5}{ɨ}
+		\vpoint{0.75}{2.1}{ɨ̃}
+		\vpoint{0}{1.5}{e}
+		\vpoint{0.25}{1.25}{ẽ}
+		\vpoint{2}{1.5}{o}
+		\vpoint{1.75}{1.75}{õ}
+		\vpoint{1}{0}{a}
+		\vpoint{1.5}{.5}{ã}
+	\end{vowel}
+	\caption{Vowel inventory}
+	\label{fig:vowels}
+\end{figure}
 
-The mid vowels \phomtext{e o} can be lowered \phontext{ɛ ɔ} in closed syllables.
+\langname~allows any sequence of consecutive vowels (in separate syllables), including
+the same vowel doubled. Where a nasal and an oral vowel appear adjacent to each other,
+the sequence is completely nasal.
 
-Although \langname{} lacks diphthongs, any combination of monophthong and glide \phomtext{j w}
-can function as the rime of a syllable, except \orthtext{iy}. \langname's syllable structure
-also permits vowel hiatus, except vowel sequences 3 or longer containing two consecutive identical vowels.
+\subsection{Vowel taxonomy}
+\phomtext{i ĩ o õ} are realised as \phontext{ɨj ɨ̃j u ũ} adjacent to alveolar and velar consonants,
+they retain their original qualities adjacent to palatal consonants.
 
-\section{Syllable structure}
-\langname~permits a maximum syllable structure of (C)V(C), where C is any consonant,
-and V any monophthong. The syllable-initial sequence \orthtext{yi}---which resolves to \orthtext{i}---is prohibited, as is
-the intervocalic sequence \orthtext{rr}, which resolves to \orthtext{r}.
+The vowel denoted \phomtext{ɨ} (and its nasal counterpart) stands for a generally
+high-mid, central vowel. Its realisation varies between and within speakers as \phontext{ɨ\allo ɘ\allo ə\allo ɵ}.
 
-\section{Assimilation patterns}
-In a plosive--nasal sequence (between syllables), the plosive and nasal metathesise, and
-the nasal assimilates to the place of articulation of the plosive. \phomtext{pak.ma} becomes
-\orthtext{pangka}, for instance.
 
-In a voiced plosive--voiceless plosive sequence, the voiced plosive devoices. \phomtext{pab.ka pad.ka}
-become \orthtext{papka patka}, for instance.
+\section{Romanisation system}
+\label{sec:romanisation}
 
-When an onset consonant is appended to a vowel--glide rime (except \rom{ay oy}), the diphthong monophthongizes.
+The vowels \phomtext{i ɨ e a o} are romanised as \orthtext{i y e a o}, and their
+nasal counterparts are \orthtext{ĩ ỹ ẽ ã õ}. Where two vowels appear adjacent to
+each other, they are written consecutively---\orthtext{ỹã} is \phomtext{ɨ̃ã}.
+
+Some of the choices in romanising consonants are for aesthetic purposes, but the
+romanisation system remains largely unambiguous--\cref{tab:consonants_romanised}.
+
 \begin{table}[htpb]
-  \begin{tabular}{r l }
-    \toprule
-    diphthong          & monophthongized form \\
-    \midrule
-    \rom{aw}           & \rom{a}              \\
-    \rom{ey}           & \rom{e}              \\
-    \rom{ew}, \rom{iw} & \rom{yo}             \\
-    \rom{ow}           & \rom{o}              \\
-    \bottomrule
-  \end{tabular}
+	\centering
+	\begin{tabular}{@{}rccccc@{}}
+		\toprule
+		                       & labial      & alveolar    & sibilant    & palatal       & dorsal        \\
+		\midrule
+		nasal                  & \native{m}  & \native{n}  &             & \native{ñ}    & \native{g ng} \\
+		plosive \textit{tense} & \native{p'} & \native{t'} & \native{s'} & \native{c'}   & \native{k'}   \\
+		plosive \textit{plain} & \native{p}  & \native{t}  & \native{s}  & \native{c}    & \native{k}    \\
+		fricative              & \native{v}  & \native{z}  & \native{s}  & \native{x ç}  & \native{h}    \\
+		liquid                 &             & \native{l}  & \native{r}  & \native{j ll} &               \\
+		\bottomrule
+	\end{tabular}
+	\caption{Consonant romanisation}
+	\label{tab:consonants_romanised}
 \end{table}
 
-\section{Stress and prosody}
-\langname{} has regular penultimate stress. The stressed syllbale is often accompanied
-by a higher pitch, and/or a lengthening of the vowel.
+\begin{itemize}
+	\item \phomtext{ŋ} is \orthtext{ng} in consonant clusters, and \orthtext{g} otherwise
+	\item \phomtext{ɕ} is \orthtext{ç} in consonant clusters, and \orthtext{x} otherwise
+	\item \phomtext{j} is \orthtext{ll} syllable-finally, and \orthtext{j} otherwise
+\end{itemize}
+
+\section{Phonotactics}
+\label{sec:phonotactics}
+
+\langname~organises its phonemes rather modestly.
+The structure of its phonological word is as follows\sidenote{The notation used here is \detail{Recursive Baerian Phonotactics Notation}. \href{https://llblumire.github.io/recursive-baerian-phonotactics-notation/20170801_Recursive_Baerian_Phonotactics_Notation.pdf}{link}.}.
+\[
+	\large
+	\#
+	\bigg[_{\hspace{0.2em}\omega}
+	% \text{C}_0^{?}
+	\Big[_{\hspace{0.1em}\sigma}
+	\text{C}_1^{?} \text{V} \text{C}_2^{?}
+	\Big]
+	\sigma^{*}
+	\bigg]
+	\#
+\]
+
+\begin{itemize}
+	\item \(\#\) is a word boundary; \([\:]\) a domain
+	\item \(\omega\) is a phonological word; \(\sigma\) a syllable
+	\item \({}^{?}\) means `zero or one'; \({}^*\) means `zero or more times'
+	\item \(\text{C}_{1-2}\) are consonants; \(\text{V}\) is a vowel, nasalised or plain
+\end{itemize}
+
+\langname~has a (C)V(C) structure. It allows consecutive vowels (including the same vowel appearing twice) in hiatus;
+if a plain and nasalised vowel appear adjacent to each other, they are both nasalised.
+
+There are some restrictions on consonant clusters between syllables:
+\begin{itemize}
+	\item Non-plosive geminates are disallowed, so \phomtext{m.m} simplifies to \phomtext{m}, and \phomtext{r.r} to \phomtext{r}
+	      \begin{itemize}
+		      \item Plosive geminates automatically simplify to their tenius versions
+	      \end{itemize}
+	\item Tenius plosives cannot form clusters
+	\item The second consonant in the cluster cannot have a higher lenition level than the first consonant
+\end{itemize}
+
+\section{Lenition}
+\label{sec:lenition}
+
+\detail{Lenition} (denoted by \orthtext{ᴸ}) is a process that takes place
+semi-pervasively in \langname. Consonants are organised into \detail{levels} of
+lenition, where --1 and 3 represent the most fortis and most lenis variants---\cref{tab:lenition_consonants}.
+
+\begin{table}[htpb]
+	\centering
+	\begin{tabular}{@{}rccccc@{}}
+		\toprule
+		level & labial      & alveolar    & sibilant    & palatal     & dorsal      \\
+		\midrule
+		--1   & \native{p'} & \native{t'} & \native{s'} & \native{c'} & \native{k'} \\
+		0     & \native{p}  & \native{t}  & \native{s}  & \native{c}  & \native{k}  \\
+		1     & \native{v}  & \native{z}  & \native{r}  & \native{x}  & \native{h}  \\
+		2     & \native{m}  & \native{l}  & \native{l}  & \native{j}  & \native{g}  \\
+		3     & \native{m}  & \native{n}  & \native{n}  & \native{ñ}  & \rom{∅}     \\
+		\bottomrule
+	\end{tabular}
+	\caption{Lenition patterns}
+	\label{tab:lenition_consonants}
+\end{table}
+
+As mentioned in \cref{sec:consonants}, \phomtext{sː s} give \phomtext{s} in lenition environments
+because they descend from ancestral affricates \phomtext{*tːs *ts} that had complied with this lenition pattern.
+In a similar vein, \phomtext{t} previously lenited to \phomtext{*θ} and \phomtext{*tɬ} to \phomtext{ɬ}; however \phomtext{*tɬ} later merged with \phomtext{t} and \phomtext{*θ} with \phomtext{ɬ}.
+
+The process of lenition takes place in some morphological environments
+as a means to simplify otherwise `tricky' consonant clusters. When a consonant--consonant
+cluster \(\text{C}_a\text{C}_b\) is created across a morpheme boundary, some rules govern its behaviour:
+\begin{itemize}
+	\item If \(\text{C}_a\) is a nasal (lenition level 3), it matches the place of articulation of the lenited \({C}_b\) --- \phomtext{n.k} lenites to \phomtext{*n.h}, which then simplifies to \phomtext{ŋ.h}
+	\item If the lenited version of \(\text{C}_b\) is \phomtext{r}, it metathesises with lenited \(\text{C}_a\) --- \phomtext{p.s} lenites to \phomtext{*v.r}, which then metathesises to \phomtext{r.ʋ}
+\end{itemize}
+
+%% what if? /j/ - g, /s\/ - j 
+Lenition can take place in compound words:
+\begin{columns}[cols.markup=\mutations]
+	\cols \rom{mẽ·tok} & \rom{mẽzok} & mom--dad, parent
+	\cols \rom{hoc·ser} & \rom{hollrer} & wing--shark, shark's fin
+	\cols \rom{ñe·coan} & \rom{ñejoan} & two thousand
+\end{columns}
+
+And it also arises as a result of the oblique case:
+
+\begin{columns}[cols.markup=\mutations]
+	\cols \native{pĩᴸ-cal} & \rom{pĩxal} & person (\OBL)
+	\cols \native{eᴸ-võã}  & \rom{emõã} & dog (\OBL)
+	\cols \native{ᴸ-kat'o}  & \rom{hat'o} & rock (\OBL)
+\end{columns}
+
+\subsection{What about the opposite?}
+\detail{Fortition} (the opposite of lenition), denoted with \orthtext{ᴷ}, can happen in the imperative mood:
+\begin{columns}[cols.markup=\mutations]
+	\cols \native{aᴷ-top'} & \rom{at'op'} & jump (\IMP)!
+	\cols \native{aᴷ-sẽĩr}  & \rom{as'ẽĩr} & respect (\IMP)!
+	\cols \native{aᴷ-anĩx} & \rom{aganĩx} & remember (\IMP)!
+	% \cols \native{ᴸ-kato}  & \rom{hato} & rock (\OBL)
+\end{columns}

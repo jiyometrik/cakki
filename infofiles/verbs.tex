@@ -2,43 +2,153 @@
 \label{ch:verbs}
 
 \section{Voice}
-Monotransitive and ditransitive verbs take one of the following suffixes to
-indicate the role of the argument \detail{in focus}. Avalent verbs receive no such treatment.
+\langname~features \detail{symmetrical voice}, where the role of the primary argument
+(or the argument \detail{in focus}) is encoded onto the verb itself. There are four voices: \detail{actor voice} (\AV), \detail{patient voice} (\PV), \detail{locative voice} (\LV)
+and \detail{instrumental voice} (\IV).
+
 \begin{table}[htpb]
 	\begin{tabular}{r l}
 		\toprule
 		\AV & \rom{-in}  \\
 		\PV & \rom{-nak} \\
 		\LV & \rom{-ong} \\
-		\IV & \rom{-paw} \\
+		\IV & \rom{-pay} \\
 		\bottomrule
 	\end{tabular}
 	\caption{Voice affixes}
 	\label{tab:voices}
 \end{table}
 
-\section{Person}
-Verbs also conjugate for person if the \detail{actor} in the verb can be expressed
-with a personal pronoun. The personal pronouns cliticise onto the verb.
-\begin{table}[htpb]
-	\begin{tabular}{r l}
-		\toprule
-		\FIRST\SG       & \rom{tsi-}  \\
-		\FIRST\PL.\INCL & \rom{tsay-} \\
-		\FIRST\PL.\EXCL & \rom{tsod-} \\
-		\SECOND\SG      & \rom{na-}   \\
-		\SECOND\PL      & \rom{ney-}  \\
-		\THIRD\SG       & \rom{∅}     \\
-		\THIRD\PL       & \rom{kaw-}  \\
-		\bottomrule
-	\end{tabular}
-	\caption{Verbal pronoun clitics}
-	\label{tab:pronoun_clitic}
-\end{table}
+\subsection{Actor voice}
+\AV~brings into focus the agent of the action or state. In verbs that
+take two arguments---an \detail{agent} and \detail{direct object}---the agent
+is the focus.
+\begin{examples}
+	\ex
+	\label{ex:actor_voice}
+	\script ngain wan yeko ri mosea \\
+	\bits nga -in wan yeko ri mosea \\
+	\gloss eat AV DIR child OBL crab \\
+	\tr A child eats crab.
+\end{examples}
+For \detail{intransitive} verbs that only take one argument (again the agent), \AV~is used
+to indicate the causative form of the verb.
+\begin{examples}
+	\ex
+	\label{ex:noncaus}
+	\script sapek cai \\
+	\bits sapek cai \\
+	\gloss be.angry man \\
+	\tr That man is angry.
+\end{examples}
+\begin{examples}
+	\ex
+	\label{ex:caus}
+	\script sapekin wan cai ri mosea \\
+	\bits sapek -in wan cai ri mosea \\
+	\gloss be.angry AV DIR man OBL crab \\
+	\tr That man angered the crab.
+\end{examples}
+
+\subsection{Patient voice}
+\PV~brings into focus the \detail{direct object}---the \detail{patient}---of
+the action.
+\begin{examples}
+	\ex
+	\label{ex:pigcaught}
+	\script koparnak wan bao ri boyan \\
+	\bits kopar -nak wan bao ri boyan \\
+	\gloss catch PV DIR pig OBL girl \\
+	\tr The pig is caught by the girl.
+\end{examples}
+
+\PV~may also decrease the valency of a transitive verb, so that
+the patient is the only required argument.
+\begin{examples}
+	\ex
+	\label{ex:kidinjured}
+	\script ocitnak hea \\
+	\bits ocit -nak hea \\
+	\gloss injure PV boy \\
+	\tr The boy is hurt.
+\end{examples}
+
+\subsection{Locative voice}
+\LV~brings into focus the location where an action is performed or experienced.
+The agent and direct patient are both marked in the \detail{oblique} case here,
+so the agent must precede the direct patient.
+\begin{examples}
+	\ex
+	\label{ex:carshop}
+	\script beyraong ri kori wan makesen ri soam \\
+	\bits beyra -ong ri kori wan makesen ri soam \\
+	\gloss buy LV DIR shop OBL car OBL soldier  \\
+	\tr The shop is where the soldier buys cars. \\
+\end{examples}
+\LV~may also bring into focus the argument for whom an action is performed.
+\begin{examples}
+	\ex
+	\label{ex:slaughter}
+	\script hoakong ri eno i wewin wan inan i toan \\
+	\bits hoak -ong ri eno i wewin wan inan i toan \\
+	\gloss kill LV OBL MED LK goat DIR god LK sun \\
+	\tr For the sun god is the goat slaughtered.
+\end{examples}
+\begin{examples}
+	\ex
+	\label{ex:givecake}
+	\script angoy ondaong wanno ri ciayon  \\
+	\bits angoy onda -ong wan =no ri ci= ayon \\
+	\gloss POT give LV DIR 2S OBL 1S.POS soul \\
+	\tr I can give you my soul.
+\end{examples}
+\LV~in general emphasises the secondary patient of an action.
+\begin{examples}
+	\ex
+	\label{ex:borrowbooks}
+	\script bidanong ri hea wan boyan ri caik \\
+	\bits bidan -ong ri hea wan boyan ri caik \\
+	\gloss borrow LV OBL boy DIR girl OBL book \\
+	\tr A boy borrows a book from a girl.
+\end{examples}
+With only two arguments (the actor and direct object), \LV~may also take
+on a \detail{partitive} role.
+\begin{examples}
+	\ex
+	\label{ex:cookmeat}
+	\script kohanong wan obaw ri ciamha \\
+	\bits kohan -ong wan obaw ri ci= amha \\
+	\gloss cook LV DIR meat OBL 1S.POS mother \\
+	\tr At meat does my mother cook.
+	\tr My mother cooks some meat.
+\end{examples}
+
+
+\subsection{Instrumental voice}
+\IV~primarily indicates the \detail{means} with which an action is performed.
+The agent and patient are similarly both marked with the \detail{oblique},
+so the agent precedes the patient.
+\begin{examples}
+	\ex
+	\label{ex:digsoil}
+	\script bahsipay ri hehea wan copip ri ingga \\
+	\bits bahsi -pay ri he^ hea wan copip ri ingga \\
+	\gloss dig IV OBL ASS boy DIR hoe OBL soil \\
+	\tr Hoes are dug soil with by boys.
+\end{examples}
+\IV~can also indicate an agent alongside which an action is performed (i.e. the comitative).
+\begin{examples}
+	\ex
+	\label{ex:singing}
+	\script odepay ri boyan wan hea \\
+	\bits ode -pay ri boyan wan hea \\
+	\gloss sing IV OBL girl DIR boy \\
+	\tr The girl sings with the boy.
+\end{examples}
 
 \section{Tense}
 \detail{Stative verbs}---verbs that describe a state of being--and \detail{dynamic verbs}---those
-that describe an action, receive identical tense affixes.
+that describe an action, receive an identical set of tense affixes.
 
 There are three broad `tenses'. The \detail{perfective} describes completed actions,
 the \detail{imperfective} describes actions that have yet to take place, and
@@ -48,27 +158,43 @@ the \detail{progressive} describes actions that are in the process of completion
 		\toprule
 		\PFV  & \rom{po-}                         \\
 		\NPFV & \rom{∅}, \rom{nge-}               \\
-		\PROG & first syllable/full reduplication \\
+		\PRG  & first syllable/full reduplication \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tense affixes}
 	\label{tab:tenses}
 \end{table}
-Full reduplication in \PROG~implies that the action is tedious or wearisome to complete,
+
+\PFV~implies an action's full completion; \NPFV~sometimes implies that the verb is a general truth, or that it is known to happen.
+Full reduplication in \PRG~implies that the action is tedious or wearisome to complete,
 or that it is nowhere close to ending.
+
+\begin{examples}
+	\ex
+	\label{ex:isoldsomerice}
+	\script poyamiong wan sisici riyo \\
+	\bits po- yami -ong wan si^ sici ri =yo \\
+	\gloss PFV sell LV DIR ASS rice OBL 1S \\
+	\tr I sold some rice. \\
+
+	\ex
+	\label{ex:isellsomericeeveryday}
+	\script ong noy i soay ngeyamiong wan sisici riyo \\
+	\bits ong noy i soay nge- yami -ong wan si^ sici ri =yo \\
+	\gloss LOC every LK day NPFV sell LV DIR ASS rice OBL 1S \\
+	\tr Every day I (regularly) sell rice. \\
+\end{examples}
 
 \section{Aspect and mood}
 Ditto, stative and dynamic verbs receive identical aspect and mood markers.
 \begin{table}[htpb]
 	\begin{tabular}{r l}
 		\toprule
-		\HAB & \rom{tang-} \\
-		\IRR & \rom{sin-}  \\
+		\IRR & \rom{⟨es⟩} \\
+		\IMP & \rom{da-}  \\
+		\PRH & \rom{isop} \\
+		\INT & \rom{-we}  \\
 		\bottomrule
 	\end{tabular}
 	\caption{Aspect and mood affixes}
 \end{table}
-In addition, the standalone particle \rom{hew} is used in conjunction with
-any of the verbal affixes to indicate the interrogative.
-
-So far, no irregular verbs have cropped up.
