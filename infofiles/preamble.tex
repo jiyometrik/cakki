@@ -1,9 +1,38 @@
+% the almighty linguistics package
+\usepackage{squarecake-ling}
+
+% for greater font control
 \usepackage{fontspec}
 \usepackage{unicode-math}
 \usepackage{amsmath, relsize}
 
+% citations
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{cleveref}
+\RequirePackage[
+	backend=biber,
+	style=apa,
+	sorting=ynt
+]{biblatex}
+
 %? Date handling
+\usepackage{datetime2}
 \DTMsavedate{startdate}{2024-11-18}
+
+%? Text formatting
+\newcommand{\detail}[1]{\textcolor{pancake@yellow}{\textit{#1}}}
+\renewcommand{\orthtext}[1]{$\langle$\textcolor{pancake@cyan}{#1}$\rangle$}
+\renewcommand{\native}[1]{\textcolor{pancake@cyan}{\textit{#1}}}
+\renewcommand{\rom}[1]{{\textcolor{pancake@cyan}{#1}}}
+\renewcommand{\phontext}[1]{[\textcolor{pancake@cyan}{#1}]}
+\renewcommand{\phomtext}[1]{/{\textcolor{pancake@cyan}{#1}}/}
+\renewcommand{\morphtext}[1]{⫽\textcolor{pancake@cyan}{#1}⫽}
+
+% titles and headers
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\sffamily\LARGE}{\thechapter\hspace{.5em}\vrule width .7pt}{.5em}{}
+\titleformat{\section}[hang]{\normalfont\sffamily\Large}{\thesection\hspace{.5em}\vrule width .7pt}{.5em}{}
+\titleformat{\subsection}[hang]{\itshape\sffamily\large}{\thesubsection}{.5em}{}
 
 %? Layout
 \setcounter{secnumdepth}{1}
@@ -14,29 +43,15 @@
 
 %* Font
 \setmainfont{charis sil}
-\setmathfont{libertinus math}
+\setmathfont{xcharter math}
 \setsansfont{fira sans}
-
 
 %* Glossary
 \renewcommand*{\glsnamefont}[1]{#1}
 
-%? Text formatting
-\definecolor{pink}{HTML}{DB4E6E}
-\definecolor{green}{HTML}{60A861}
-\definecolor{parch}{HTML}{fbf7f2}
-\definecolor{steel}{HTML}{2B6F94}
-
-\newcommand{\nativeparen}[1]{{\kern-6pt（#1）\kern-6pt}}
-\newcommand{\detail}[1]{\textcolor{green}{\textit{#1}}}
-
-\newenvironment{tightcenter}{\setlength{\topsep}{0pt}\setlength{\parskip}{0pt}\vspace{1em}
-	\begin{center}}{
-	\end{center}}
-
 %? Shortcuts
 \newcommand{\langname}{\rom{Ipcal}}
-\newcommand{\allo}{\textasciitilde}
+\newcommand{\allo}{\(\,\sim\,\)}
 
 %? Baarux stuff
 %* Set up new line types
@@ -44,6 +59,5 @@
 \updatebaarustyle{columns}{}{\addbaaruhook{everygloss}{\baarucolwidth{1}{3.25cm}}}
 \newenvironment{multiexample}[1][]{\example\textbf{#1}\examples}{\endexamples\endexample}
 
+%? Glossing abbreviations
 \loadglsentries{abbreviations.tex}
-% \input{abbreviations}
-\pagecolor{parch}

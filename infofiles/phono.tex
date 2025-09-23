@@ -11,15 +11,15 @@ This chapter describes \langname's \detail{phonology}.
 shows the \detail{lenition pattern} of each broad place of articulation---see \cref{sec:lenition}.
 \begin{table}[htpb]
 	\centering
-	\begin{tabular}{@{}rccccc@{}}
+	\begin{tabular}{@{}rlllll@{}}
 		\toprule
-		                       & labial & alveolar & sibilant & palatal & dorsal \\
+		                       & labial                 & alveolar               & sibilant              & palatal               & dorsal                \\
 		\midrule
-		nasal                  & m      & n        &          & ɲ       & ŋ      \\
-		plosive \textit{tense} & pː     & tː       & sː       & cː      & kː     \\
-		plosive \textit{plain} & p      & t        &          & c       & k      \\
-		fricative              &        & ɬ        & s        & ɕ       & h      \\
-		liquid                 & ʋ      & l        & r\allo z & j       &        \\
+		plosive \textit{tense} & pː\hfill\orthtext{p'}  & tː\hfill\orthtext{t'}  & sː\hfill\orthtext{s'} & cː\hfill\orthtext{c'} & kː\hfill\orthtext{k'} \\
+		plosive \textit{plain} & p\hfill\orthtext{p}    & t\hfill\orthtext{t}    & s\hfill\orthtext{s}   & c\hfill\orthtext{c}   & k\hfill\orthtext{k}   \\
+		fricative              & f\hfill\orthtext{f}    & ɬ\hfill\orthtext{ll}   &                       & ɕ\hfill\orthtext{x}   & h\hfill\orthtext{h}   \\
+		plosive \textit{soft}  & b\hfill\orthtext{b\;m} & d\hfill\orthtext{d\;n} &                       & ɟ\hfill\orthtext{j ñ} & ɡ\hfill\orthtext{g}   \\
+		liquid                 & ʋ\hfill\orthtext{v}    & l\hfill\orthtext{l}    &                       & j\hfill\orthtext{y}   &                       \\
 		\bottomrule
 	\end{tabular}
 	\caption{Consonant inventory}
@@ -27,13 +27,11 @@ shows the \detail{lenition pattern} of each broad place of articulation---see \c
 \end{table}
 
 \begin{itemize}
-	\item \phomtext{m pː p} are bilabial % though m is often realised as ~w
-	\item \phomtext{ʋ} is labiodental
-	\item \phomtext{n tː t ɬ l} are dental; \phomtext{sː s} are apico-alveolar
-	\item \phomtext{ɲ cː c ɕ} are alveolo-palatal; \phomtext{j} is true palatal
-	\item \phomtext{ŋ kː k} are velar, though \phomtext{ŋ} is often realised as \phontext{ɰ̃}
+	\item \phomtext{pː p b} are bilabial; \phomtext{f ʋ} are labiodental
+	\item \phomtext{tː t ɬ d l} are dental; \phomtext{sː s} are apico-alveolar
+	\item \phomtext{cː c ɟ ɕ} are alveolo-palatal; \phomtext{j} is true palatal
+	\item \phomtext{kː k ɡ} are velar
 	\item \phomtext{h} can be realised as any voiceless `back' fricative (velar, uvular, pharyngeal, glottal)
-	\item standalone \phomtext{r} is often fricated: alveolar \phontext{z} or palato-alveolar \phontext{r̝}; in consonant clusters it is \phontext{ɾ}
 \end{itemize}
 
 \subsection{On \phomtext{s sː}}
@@ -45,77 +43,48 @@ the lenition pattern in \cref{sec:lenition} to form \phontext{s}, but they lenit
 The `tense' plosives \phomtext{pː tː sː cː kː} are realised as long consonant
 geminates word-medially and word-finally, and as tenuis \phontext{p͈ t͈ s͈ c͈ k͈} word-initially.
 
-Voiceless obstruents can become voiced after voiced segments (including vowels). In particular,
-the plain plosives \phomtext{p t s c k} are prone to becoming prenasalised \phontext{ᵐb ⁿd ⁿs ᶮɟ ᵑɡ},
-especially after nasal vowels.
+The `soft' plosives \phomtext{b d ɟ ɡ} are realised as voiced \phontext{b d ɟ ɡ} word-initially,
+prenasalised \phontext{ᵐb ⁿd ᶮɟ ᵑɡ} word-medially, and as fully nasal \phontext{m n ɲ ŋ}
+word-finally and adjacent to nasal vowels.
 
 \section{Vowels}
 \label{sec:vowels}
 
-\langname~has comparatively few vowels---\cref{fig:vowels}.
+\langname~has comparatively few vowels---\cref{fig:vowels}. All vowels have
+nasalised counterparts, doubling the total number of monophthongs.
 
-\begin{figure}
+\begin{figure}[htpb]
 	\centering
 	\begin{vowel}
 		\vpoint{0}{3}{i}
 		\vpoint{0.25}{2.5}{ĩ}
-		\vpoint{1}{2.5}{ɨ}
-		\vpoint{0.75}{2.1}{ɨ̃}
 		\vpoint{0}{1.5}{e}
-		\vpoint{0.25}{1.25}{ẽ}
+		\vpoint{0.25}{1.1}{ẽ}
 		\vpoint{2}{1.5}{o}
-		\vpoint{1.75}{1.75}{õ}
+		\vpoint{1.75}{1.9}{õ}
 		\vpoint{1}{0}{a}
-		\vpoint{1.5}{.5}{ã}
+		\vpoint{1.65}{.5}{ã}
 	\end{vowel}
 	\caption{Vowel inventory}
 	\label{fig:vowels}
 \end{figure}
 
-\langname~allows any sequence of consecutive vowels (in separate syllables), including
-the same vowel doubled. Where a nasal and an oral vowel appear adjacent to each other,
-the sequence is completely nasal.
-
 \subsection{Vowel taxonomy}
-\phomtext{i ĩ o õ} are realised as \phontext{ɨj ɨ̃j u ũ} adjacent to alveolar and velar consonants,
+\phomtext{i ĩ o õ} are realised as \phontext{ɨ ɨ̃ u ũ} adjacent to alveolar and dorsal consonants;
 they retain their original qualities adjacent to palatal consonants.
 
-The vowel denoted \phomtext{ɨ} (and its nasal counterpart) stands for a generally
-high-mid, central vowel. Its realisation varies between and within speakers as \phontext{ɨ\allo ɘ\allo ə\allo ɵ}.
+Oral vowels can only be in hiatus with other oral vowels, and nasal vowels with other nasal vowels.
+Ergo, affixes that cause a vowel to be adjacent to a vowel of the opposite nasality
+will change their own vowel to match the nasality of the adjacent vowel.
 
+\section{Tone}
+\label{sec:tone}
 
-\section{Romanisation system}
-\label{sec:romanisation}
+\detail{Tone} is a syllable-level feature. In \langname, syllables carry one of two tones,
+a \detail{high tone} \phomtext{◌́} or a \detail{zero tone} \phomtext{◌}, the latter of which surfaces as mid.
 
-The vowels \phomtext{i ɨ e a o} are romanised as \orthtext{i y e a o}, and their
-nasal counterparts are \orthtext{ĩ ỹ ẽ ã õ}. Where two vowels appear adjacent to
-each other, they are written consecutively---\orthtext{ỹã} is \phomtext{ɨ̃ã}.
-
-Some of the choices in romanising consonants are for aesthetic purposes, but the
-romanisation system remains largely unambiguous--\cref{tab:consonants_romanised}.
-
-\begin{table}[htpb]
-	\centering
-	\begin{tabular}{@{}rccccc@{}}
-		\toprule
-		                       & labial      & alveolar    & sibilant    & palatal       & dorsal        \\
-		\midrule
-		nasal                  & \native{m}  & \native{n}  &             & \native{ñ}    & \native{g ng} \\
-		plosive \textit{tense} & \native{p'} & \native{t'} & \native{s'} & \native{c'}   & \native{k'}   \\
-		plosive \textit{plain} & \native{p}  & \native{t}  & \native{s}  & \native{c}    & \native{k}    \\
-		fricative              & \native{v}  & \native{z}  & \native{s}  & \native{x ç}  & \native{h}    \\
-		liquid                 &             & \native{l}  & \native{r}  & \native{j ll} &               \\
-		\bottomrule
-	\end{tabular}
-	\caption{Consonant romanisation}
-	\label{tab:consonants_romanised}
-\end{table}
-
-\begin{itemize}
-	\item \phomtext{ŋ} is \orthtext{ng} in consonant clusters, and \orthtext{g} otherwise
-	\item \phomtext{ɕ} is \orthtext{ç} in consonant clusters, and \orthtext{x} otherwise
-	\item \phomtext{j} is \orthtext{ll} syllable-finally, and \orthtext{j} otherwise
-\end{itemize}
+Similarly to vowel nasality, where two vowels of opposite tone are adjacent,
+the latter vowel assimilates the tone of the former vowel.
 
 \section{Phonotactics}
 \label{sec:phonotactics}
@@ -128,7 +97,7 @@ The structure of its phonological word is as follows\sidenote{The notation used 
 	\bigg[_{\hspace{0.2em}\omega}
 	% \text{C}_0^{?}
 	\Big[_{\hspace{0.1em}\sigma}
-	\text{C}_1^{?} \text{V} \text{C}_2^{?}
+	\text{T} \text{C}_1^{?} \text{V} \text{C}_2^{?}
 	\Big]
 	\sigma^{*}
 	\bigg]
@@ -139,79 +108,53 @@ The structure of its phonological word is as follows\sidenote{The notation used 
 	\item \(\#\) is a word boundary; \([\:]\) a domain
 	\item \(\omega\) is a phonological word; \(\sigma\) a syllable
 	\item \({}^{?}\) means `zero or one'; \({}^*\) means `zero or more times'
-	\item \(\text{C}_{1-2}\) are consonants; \(\text{V}\) is a vowel, nasalised or plain
+	\item \(\text{T}\) is a tone; \(\text{C}_{1-2}\) are consonants; \(\text{V}\) is a vowel, nasalised or plain
 \end{itemize}
 
-\langname~has a (C)V(C) structure. It allows consecutive vowels (including the same vowel appearing twice) in hiatus;
-if a plain and nasalised vowel appear adjacent to each other, they are both nasalised.
+\langname~has a (C)V(C) structure. It allows consecutive vowels (including the same vowel appearing twice) in hiatus,
+although vowels in hiatus must match in nasality and tone---\cref{sec:vowels,sec:tone}.
 
-There are some restrictions on consonant clusters between syllables:
+There are some restrictions on consonant clusters \(\text{C}_\alpha\text{C}_\beta\) between syllables:
 \begin{itemize}
-	\item Non-plosive geminates are disallowed, so \phomtext{m.m} simplifies to \phomtext{m}, and \phomtext{r.r} to \phomtext{r}
+	\item \(\text{C}_\alpha \neq \text{C}_\beta\); ergo, geminates cannot occur
 	      \begin{itemize}
-		      \item Plosive geminates automatically simplify to their tenius versions
+		      \item Geminate plosives \phomtext{p.p t.t s.s c.c k.k} are realised as tense plosives
+		      \item Geminate non-plosives are simplified to their non-geminated forms
 	      \end{itemize}
-	\item Tenius plosives cannot form clusters
-	\item The second consonant in the cluster cannot have a higher lenition level than the first consonant
+	\item The lenition level of \(\text{C}_\beta\) must be less than or equal to that of \(\text{C}_\alpha\), i.e. \(\text{C}_\alpha\) must be of higher sonority---\cref{sec:lenition}
 \end{itemize}
 
 \section{Lenition}
 \label{sec:lenition}
 
 \detail{Lenition} (denoted by \orthtext{ᴸ}) is a process that takes place
-semi-pervasively in \langname. Consonants are organised into \detail{levels} of
-lenition, where --1 and 3 represent the most fortis and most lenis variants---\cref{tab:lenition_consonants}.
+semi-pervasively in \langname~especially across morpheme boundaries, where it is
+used to simplify otherwise `tricky' consonant clusters. Consonants are organised
+into \detail{levels} of lenition (represented by \(\lambda\)), where \({-1}\)
+and \(3\) represent the most fortis and most lenis forms---\cref{tab:lenition_consonants}.
 
 \begin{table}[htpb]
 	\centering
 	\begin{tabular}{@{}rccccc@{}}
 		\toprule
-		level & labial      & alveolar    & sibilant    & palatal     & dorsal      \\
+		\(\lambda\) & labial   & alveolar & sibilant & palatal  & dorsal   \\
 		\midrule
-		--1   & \native{p'} & \native{t'} & \native{s'} & \native{c'} & \native{k'} \\
-		0     & \native{p}  & \native{t}  & \native{s}  & \native{c}  & \native{k}  \\
-		1     & \native{v}  & \native{z}  & \native{r}  & \native{x}  & \native{h}  \\
-		2     & \native{m}  & \native{l}  & \native{l}  & \native{j}  & \native{g}  \\
-		3     & \native{m}  & \native{n}  & \native{n}  & \native{ñ}  & \rom{∅}     \\
+		\(-1\)      & \rom{p'} & \rom{t'} & \rom{s'} & \rom{c'} & \rom{k'} \\
+		\(0\)       & \rom{p}  & \rom{t}  & \rom{s}  & \rom{c}  & \rom{k}  \\
+		\(1\)       & \rom{f}  & \rom{ll} &          & \rom{x}  & \rom{h}  \\
+		\(2\)       & \rom{b}  & \rom{d}  &          & \rom{j}  & \rom{g}  \\
+		\(3\)       & \rom{v}  & \rom{l}  &          & \rom{y}  & \rom{∅}  \\
 		\bottomrule
 	\end{tabular}
 	\caption{Lenition patterns}
 	\label{tab:lenition_consonants}
 \end{table}
 
-As mentioned in \cref{sec:consonants}, \phomtext{sː s} give \phomtext{s} in lenition environments
-because they descend from ancestral affricates \phomtext{*tːs *ts} that had complied with this lenition pattern.
-In a similar vein, \phomtext{t} previously lenited to \phomtext{*θ} and \phomtext{*tɬ} to \phomtext{ɬ}; however \phomtext{*tɬ} later merged with \phomtext{t} and \phomtext{*θ} with \phomtext{ɬ}.
+\phomtext{s} is impervious to further lenition; it spans levels \(0\) to \(3\).
 
-The process of lenition takes place in some morphological environments
-as a means to simplify otherwise `tricky' consonant clusters. When a consonant--consonant
-cluster \(\text{C}_a\text{C}_b\) is created across a morpheme boundary, some rules govern its behaviour:
-\begin{itemize}
-	\item If \(\text{C}_a\) is a nasal (lenition level 3), it matches the place of articulation of the lenited \({C}_b\) --- \phomtext{n.k} lenites to \phomtext{*n.h}, which then simplifies to \phomtext{ŋ.h}
-	\item If the lenited version of \(\text{C}_b\) is \phomtext{r}, it metathesises with lenited \(\text{C}_a\) --- \phomtext{p.s} lenites to \phomtext{*v.r}, which then metathesises to \phomtext{r.ʋ}
-\end{itemize}
+When a consonant--consonant cluster \(\text{C}_\alpha\text{C}_\beta\) is formed
+by affixes, both consonants lenite by one level, forming \(\text{G}_\alpha\text{G}_\beta\).
+The usual phonotactic rules apply---\cref{sec:phonotactics}.
 
-%% what if? /j/ - g, /s\/ - j 
-Lenition can take place in compound words:
-\begin{columns}[cols.markup=\mutations]
-	\cols \rom{mẽ·tok} & \rom{mẽzok} & mom--dad, parent
-	\cols \rom{hoc·ser} & \rom{hollrer} & wing--shark, shark's fin
-	\cols \rom{ñe·coan} & \rom{ñejoan} & two thousand
-\end{columns}
-
-And it also arises as a result of the oblique case:
-
-\begin{columns}[cols.markup=\mutations]
-	\cols \native{pĩᴸ-cal} & \rom{pĩxal} & person (\OBL)
-	\cols \native{eᴸ-võã}  & \rom{emõã} & dog (\OBL)
-	\cols \native{ᴸ-kat'o}  & \rom{hat'o} & rock (\OBL)
-\end{columns}
-
-\subsection{What about the opposite?}
-\detail{Fortition} (the opposite of lenition), denoted with \orthtext{ᴷ}, can happen in the imperative mood:
-\begin{columns}[cols.markup=\mutations]
-	\cols \native{aᴷ-top'} & \rom{at'op'} & jump (\IMP)!
-	\cols \native{aᴷ-sẽĩr}  & \rom{as'ẽĩr} & respect (\IMP)!
-	\cols \native{aᴷ-anĩx} & \rom{aganĩx} & remember (\IMP)!
-	% \cols \native{ᴸ-kato}  & \rom{hato} & rock (\OBL)
-\end{columns}
+If \(\text{G}_\alpha\) is of \textit{lower} sonority than \(\text{G}_\beta\),
+\(\text{G}_\alpha\) and \(\text{G}_\beta\) metathesise.

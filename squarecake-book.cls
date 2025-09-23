@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{squarecake-book}[14/07/2025 Pancake's annotated book class, by Pancake, modified by Jiyo]
+\ProvidesClass{squarecake-book}[2021/09/09 Annotated book class]
 
 %* Footnotes to sidenotes
 \DeclareOption{sidefootnotes}{
@@ -8,28 +8,87 @@
 	\renewcommand{\footnotemark}[1][]{\sidenotemark[#1]}
 }
 \DeclareOption{letterpaper}{
-	\PassOptionsToPackage{letterpaper,left=1in,top=1in,headsep=2\baselineskip,textwidth=26pc,marginparsep=2pc,marginparwidth=12pc,textheight=44\baselineskip,headheight=1.2\baselineskip}{geometry}
+	\PassOptionsToPackage{
+		letterpaper,
+		left=1in,
+		top=1in,
+		headsep=2\baselineskip,
+		textwidth=26pc,
+		marginparsep=2pc,
+		marginparwidth=12pc,
+		textheight=44\baselineskip,
+		headheight=1.2\baselineskip
+	}{geometry}
 }
 
 \DeclareOption{a4paper}{
-	\PassOptionsToPackage{a4paper,left=24.8mm,top=27.4mm,headsep=2\baselineskip,textwidth=107mm,marginparsep=8.2mm,marginparwidth=49.4mm,textheight=49\baselineskip,headheight=1.2\baselineskip}{geometry}
+	\PassOptionsToPackage{
+		a4paper,
+		left=24.8mm,
+		top=27.4mm,
+		headsep=2\baselineskip,
+		textwidth=107mm,
+		marginparsep=8.2mm,
+		marginparwidth=49.4mm,
+		textheight=49\baselineskip,
+		headheight=1.2\baselineskip
+	}{geometry}
+}
+
+\DeclareOption{b5paper}{
+	\PassOptionsToPackage{
+		b5paper,
+		left=14.66mm,
+		top=13.88mm,
+		textwidth=102.66mm,
+		marginparsep=7.33mm,
+		marginparwidth=36.66mm,
+		textheight=38\baselineskip,
+		includehead
+	}{geometry}
+}
+
+% Added by me
+\DeclareOption{legalpaper}{
+	\PassOptionsToPackage{
+		legalpaper,
+		left=1in,
+		top=1in,
+		headsep=2\baselineskip,
+		textwidth=26pc,
+		marginparsep=2pc,
+		marginparwidth=12pc,
+		textheight=56\baselineskip,
+		headheight=1.2\baselineskip
+	}{geometry}
 }
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
+% Page geometry
 \RequirePackage{geometry}
 
-%* Titles
-\RequirePackage{titlesec}
-\titleformat{\chapter}[hang]{\normalfont\sffamily\LARGE\color{steel}}{\thechapter\hspace{.5em}\vrule width .7pt}{.5em}{}
-\titleformat{\section}[hang]{\normalfont\sffamily\Large\color{steel}}{\thesection\hspace{.5em}\vrule width .7pt}{.5em}{}
-\titleformat{\subsection}[hang]{\itshape\sffamily\large\color{steel}}{\thesubsection}{.5em}{}
-
-%* Header/footer
+% Header/footer
 \RequirePackage{emptypage}
-
 \RequirePackage{fancyhdr}
+
+% Marginalia
+\RequirePackage{sidenotes}
+\RequirePackage{marginfix}
+
+% Structure enhancements
+\RequirePackage{parskip}
+\RequirePackage{booktabs}
+\RequirePackage{enumitem}
+\RequirePackage{soul}
+\RequirePackage{xcolor}
+
+% Date
+\RequirePackage{datetime2}
+
+
+% PAGE HEAD/FOOT %
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \pagestyle{fancy}
@@ -38,7 +97,6 @@
 \fancyheadoffset{0cm}
 \renewcommand{\headrulewidth}{.4pt}
 \renewcommand{\footrulewidth}{0pt}
-
 
 \fancyhead[LE, RO]{\chaptername{} \thechapter}
 \fancyhead[RE, LO]{\nouppercase{\leftmark}}
@@ -52,22 +110,17 @@
 	\fancyfoot[LE, RO]{\thepage}
 }
 
-%* Marginalia
-\RequirePackage{sidenotes}
-\RequirePackage{marginfix}
+% MARGINALIA %
+\NewDocumentCommand{\smartragged}{}{\checkoddpage \ifoddpage\raggedright \else \raggedleft\fi}
 
-\newcommand{\smartragged}{\checkoddpage \ifoddpage\raggedright \else \raggedleft\fi}
-
-\providecommand{\marginaliasize}{\footnotesize}
+\NewDocumentCommand{\marginaliasize}{}{\footnotesize}
 \DeclareCaptionFont{marginaliasize}{\marginaliasize}
 
-\let\@oldmarginpar\marginpar
-\renewcommand{\marginpar}[2][]{%
-	\ifx#1\empty\empty % when #1 is empty, we are really looking to see that \empty = \empty
-		\@oldmarginpar{\smartragged\marginaliasize #2}%
-	\else
-		\@oldmarginpar[\raggedleft\marginaliasize #1]{\raggedright\marginaliasize #2}%
-	\fi
+\NewCommandCopy\pancake@marginpar\marginpar
+\RenewDocumentCommand{\marginpar}{o m}{%
+	\IfNoValueTF{#1}%
+	{\pancake@marginpar{\smartragged\marginaliasize #2}}%
+	{\pancake@marginpar[\raggedleft\marginaliasize #1]{\raggedright\marginaliasize #2}}%
 }
 
 \DeclareCaptionJustification{smartragged}{\smartragged}
@@ -76,34 +129,33 @@
 \DeclareCaptionStyle{margintable}{font=marginaliasize}
 \DeclareCaptionStyle{sidecaption}{font=marginaliasize}
 
-%* Assorted random bits
-\makeatletter
-\newcommand{\ifdraft}[2][]{\ifdim\overfullrule>\z@
-		\expandafter#2\else\expandafter#1\fi}
-\makeatother
-\newcommand{\notetoself}[1]{\ifdraft{\sidenote{\color{gray}#1}}}
-
-%* Structure enhancements
-\RequirePackage{parskip}
-\RequirePackage{booktabs}
-\RequirePackage{enumitem}
-\RequirePackage{soul}
-\RequirePackage{xcolor}
-
-%* List adjustments
+% LIST ADJUSTMENTS
 \newlength{\listsep}
 \setlength{\listsep}{.5em}
 \setlist{topsep=0em, itemsep=\dimexpr\listsep - \parskip\relax}
 \setlist[itemize]{label=---}
 
-\RequirePackage{datetime2}
+% COLORS
+\definecolor{pancake@coral}{HTML}{DD5745}
+\definecolor{pancake@red}{HTML}{C7453B}
+\definecolor{pancake@orange}{HTML}{DA662E}
+\definecolor{pancake@yellow}{HTML}{D99149}
+\definecolor{pancake@lime}{HTML}{60A861}
+\definecolor{pancake@green}{HTML}{2C5C39}
+\definecolor{pancake@cyan}{HTML}{2B6F94}
+\definecolor{pancake@blue}{HTML}{293E6A}
+\definecolor{pancake@pink}{HTML}{DB4E6E}
+\definecolor{pancake@purple}{HTML}{722B3D}
 
-\RequirePackage{squarecake-ling}
-% commented out for now, i want to try it later
-\RequirePackage[hidelinks]{hyperref}
-\RequirePackage{cleveref}
-\RequirePackage[
-	backend=biber,
-	style=apa,
-	sorting=ynt
-]{biblatex}
+\NewDocumentCommand{\setaccent}{s m}{
+	\IfBooleanTF{#1}
+	{\colorlet{pancake@accent}{#2}}
+	{\colorlet{pancake@accent}{pancake@#2}}
+}
+
+
+\colorlet{pancake@grey}{gray}
+\colorlet{pancake@accent}{pancake@grey}
+
+% ASSORTED
+\NewDocumentCommand{\ifdraft}{m}{\ifdimgreater\overfullrule\z@{#1}\expandafter}
